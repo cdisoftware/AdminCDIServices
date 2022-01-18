@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.cdi.com.AdministradorCDI.Comun.FileStorageProperties",
+      "sourceType": "com.cdi.com.AdministradorCDI.Comun.FileStorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.upload-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.cdi.com.AdministradorCDI.Comun.FileStorageProperties"
+    }
+  ],
+  "hints": []
+}
