@@ -18,9 +18,15 @@ public class ConsultaUsuarioServiceImplementacion implements ConsultaUsuarioServ
     private EntityManager repositorio;
 
     @Override
-    public List<ConsultaUsuarioEntity> ConsultaUsuario() {
+    public List<ConsultaUsuarioEntity> ConsultaUsuario(ConsultaUsuarioEntity entidad) {
         try {
             StoredProcedureQuery consUser = repositorio.createNamedStoredProcedureQuery("PaConsultaUsuario");
+            consUser.registerStoredProcedureParameter("Nombre", String.class, ParameterMode.IN);
+            consUser.registerStoredProcedureParameter("Apellido", String.class, ParameterMode.IN);
+            consUser.registerStoredProcedureParameter("Cedula", String.class, ParameterMode.IN);
+            consUser.setParameter("Nombre", entidad.getNombre());
+            consUser.setParameter("Apellido", entidad.getApellido());
+            consUser.setParameter("Cedula", entidad.getCedula());
             return consUser.getResultList();
         } catch (Exception e) {
             List list = new ArrayList();

@@ -18,11 +18,11 @@ public class InsertaProyectoEntity {
 
     @Id
     @JsonProperty("Id_PRY")
-    private Integer Id_PRY;
+    public Integer Id_PRY;
 
     @JsonProperty("Nombre")
-    private String Nombre;
+    public String Nombre;
 
     @JsonProperty("Id_Cliente")
-    private Integer Id_Cliente;
+    public Integer Id_Cliente;
 }

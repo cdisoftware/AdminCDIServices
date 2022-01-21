@@ -18,8 +18,8 @@ public class InsertaTipoServidorEntity {
 
     @Id
     @JsonProperty("Id_Tipo_S")
-    private Integer Id_Tipo_S;
+    public Integer Id_Tipo_S;
 
     @JsonProperty("Descripcion")
-    private String Descripcion;
+    public String Descripcion;
 }

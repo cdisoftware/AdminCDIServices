@@ -19,41 +19,41 @@ public class ConsultaServidoresEntity {
 
     @Id
     @JsonProperty("Id_S")
-    private Integer Id_S;
+    public Integer Id_S;
 
     @JsonProperty("Ip_S")
-    private String Ip_S;
+    public String Ip_S;
 
     @JsonProperty("Nombre")
-    private String Nombre;
+    public String Nombre;
 
     @JsonProperty("SO")
-    private String SO;
+    public String SO;
 
     @JsonProperty("Software")
-    private String Software;
+    public String Software;
 
     @JsonProperty("Estado")
-    private Integer Estado;
+    public Integer Estado;
 
     @JsonProperty("TipoServidor")
-    private String TipoServidor;
+    public String TipoServidor;
 
     @JsonProperty("Observacion")
-    private String Observacion;
+    public String Observacion;
 
     @JsonProperty("Usuario_Ser")
-    private String Usuario_Ser;
+    public String Usuario_Ser;
 
     @JsonProperty("Password")
-    private String Password;
+    public String Password;
 
     @JsonProperty("Servidor_Aloja")
-    private Integer Servidor_Aloja;
+    public Integer Servidor_Aloja;
 
     @JsonProperty("Usuario")
-    private String Usuario;
+    public String Usuario;
 
     @JsonProperty("Fecha_Ult_Mod")
-    private String Fecha_Ult_Mod;
+    public String Fecha_Ult_Mod;
 }

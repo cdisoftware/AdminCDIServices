@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedStoredProcedureQueries;
 import javax.persistence.NamedStoredProcedureQuery;
+import javax.persistence.ParameterMode;
+import javax.persistence.StoredProcedureParameter;
 import lombok.Data;
 
 @Entity
@@ -12,35 +14,41 @@ import lombok.Data;
 @NamedStoredProcedureQueries({
     @NamedStoredProcedureQuery(
             name = "paInsertaBackup",
-            procedureName = "paInsertaBackup")
+            procedureName = "paInsertaBackup",
+            parameters = {
+                @StoredProcedureParameter(name = "Respuesta",
+                        mode = ParameterMode.OUT,
+                        type = String.class)
+            })
 })
+
 public class InsertaBackupEntity {
 
     @Id
     @JsonProperty("Id_B")
-    private Integer Id_B;
+    public Integer Id_B;
 
     @JsonProperty("Nombre")
-    private String Nombre;
+    public String Nombre;
 
     @JsonProperty("Id_PRY")
-    private Integer Id_PRY;
+    public Integer Id_PRY;
 
     @JsonProperty("Ambiente")
-    private String Ambiente;
+    public String Ambiente;
 
     @JsonProperty("Periodicidad")
-    private String Periodicidad;
+    public String Periodicidad;
 
     @JsonProperty("Id_Servidor")
-    private Integer Id_Servidor;
+    public Integer Id_Servidor;
 
     @JsonProperty("Id_Tipo_BCK")
-    private Integer Id_Tipo_BCK;
+    public Integer Id_Tipo_BCK;
 
     @JsonProperty("Id_Usuario")
-    private Integer Id_Usuario;
+    public Integer Id_Usuario;
 
     @JsonProperty("Fecha_Ult_Mod")
-    private String Fecha_Ult_Mod;
+    public String Fecha_Ult_Mod;
 }

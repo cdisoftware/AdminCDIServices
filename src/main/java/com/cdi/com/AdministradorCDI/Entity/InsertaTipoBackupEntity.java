@@ -18,8 +18,8 @@ public class InsertaTipoBackupEntity {
 
     @Id
     @JsonProperty("Id_Tipo_BCK")
-    private Integer Id_Tipo_BCK;
+    public Integer Id_Tipo_BCK;
 
     @JsonProperty("Descripcion")
-    private String Descripcion;
+    public String Descripcion;
 }

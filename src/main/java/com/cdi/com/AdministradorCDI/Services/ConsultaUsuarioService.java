@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ConsultaUsuarioService {
     
-      public List<ConsultaUsuarioEntity> ConsultaUsuario();
+      public List<ConsultaUsuarioEntity> ConsultaUsuario(ConsultaUsuarioEntity entidad);
 }

@@ -18,42 +18,42 @@ public class InsertaServidorEntity {
 
     @Id
     @JsonProperty("Id_S")
-    private Integer Id_S;
+    public Integer Id_S;
 
     @JsonProperty("Ip_S")
-    private String Ip_S;
+    public String Ip_S;
 
     @JsonProperty("Nombre")
-    private String Nombre;
+    public String Nombre;
 
     @JsonProperty("SO")
-    private String SO;
+    public String SO;
 
     @JsonProperty("Software")
-    private String Software;
+    public String Software;
 
     @JsonProperty("Estado")
-    private Integer Estado;
+    public Integer Estado;
 
     @JsonProperty("Id_Tipo_S")
-    private Integer Id_Tipo_S;
+    public Integer Id_Tipo_S;
 
     @JsonProperty("Observacion")
-    private String Observacion;
+    public String Observacion;
 
     @JsonProperty("Usuario_Ser")
-    private String Usuario_Ser;
+    public String Usuario_Ser;
 
     @JsonProperty("Password")
-    private String Password;
+    public String Password;
 
     @JsonProperty("Servicio_Aloja")
-    private Integer Servicio_Aloja;
+    public Integer Servicio_Aloja;
 
     @JsonProperty("Id_U")
-    private Integer Id_U;
+    public Integer Id_U;
 
     @JsonProperty("Fecha_Ult_Mod")
-    private String Fecha_Ult_Mod;
+    public String Fecha_Ult_Mod;
 
 }

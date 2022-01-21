@@ -19,30 +19,42 @@ public class ConsultaBackupEntity {
 
     @Id
     @JsonProperty("Id_B")
-    private Integer Id_B;
+    public Integer Id_B;
 
     @JsonProperty("Nombre")
-    private String Nombre;
+    public String Nombre;
+
+    @JsonProperty("Id_PRY")
+    public Integer Id_PRY;
 
     @JsonProperty("NombreProyecto")
-    private String NombreProyecto;
+    public String NombreProyecto;
 
     @JsonProperty("Ambiente")
-    private String Ambiente;
+    public String Ambiente;
 
     @JsonProperty("Periodicidad")
-    private String Periodicidad;
+    public String Periodicidad;
+
+    @JsonProperty("Id_Servidor")
+    public Integer Id_Servidor;
 
     @JsonProperty("IpServidor")
-    private String IpServidor;
+    public String IpServidor;
+
+    @JsonProperty("Id_Tipo_BCK")
+    public Integer Id_Tipo_BCK;
 
     @JsonProperty("Descripcion")
-    private String Descripcion;
+    public String Descripcion;
+
+    @JsonProperty("Id_Usuario")
+    public Integer Id_Usuario;
 
     @JsonProperty("UsuarioModifi")
-    private String UsuarioModifi;
+    public String UsuarioModifi;
 
     @JsonProperty("Fecha_Ult_Mod")
-    private String Fecha_Ult_Mod;
+    public String Fecha_Ult_Mod;
 
 }

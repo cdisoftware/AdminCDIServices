@@ -18,15 +18,15 @@ public class InsertaHardwareServEntity {
 
     @Id
     @JsonProperty("Id_S")
-    private Integer Id_S;
+    public Integer Id_S;
 
     @JsonProperty("DiscoDuro")
-    private String DiscoDuro;
+    public String DiscoDuro;
 
     @JsonProperty("RAM")
-    private String RAM;
+    public String RAM;
 
     @JsonProperty("Procesador")
-    private String Procesador;
+    public String Procesador;
 
 }

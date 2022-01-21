@@ -40,7 +40,6 @@ public class InsertaBackupServiceImplementacion implements InsertaBackupService 
             insertbackup.setParameter("IdTipoBackup", entidad.getId_Tipo_BCK());
             insertbackup.setParameter("IdUsuario", entidad.getId_Usuario());
             insertbackup.setParameter("Fecha", entidad.getFecha_Ult_Mod());
-
             insertbackup.execute();
             return JSONObject.quote((String) insertbackup.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
@@ -74,7 +73,7 @@ public class InsertaBackupServiceImplementacion implements InsertaBackupService 
             rolbackup.setParameter("IdUsuario", entidad.getId_Usuario());
             rolbackup.setParameter("Fecha", entidad.getFecha_Ult_Mod());
             rolbackup.execute();
-            return null;
+            return JSONObject.quote((String) rolbackup.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }

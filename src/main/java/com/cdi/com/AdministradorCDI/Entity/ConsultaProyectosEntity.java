@@ -20,11 +20,11 @@ public class ConsultaProyectosEntity {
 
     @Id
     @JsonProperty("Id_PRY")
-    private Integer Id_PRY;
+    public Integer Id_PRY;
 
     @JsonProperty("Nombre")
-    private String Nombre;
+    public String Nombre;
 
     @JsonProperty("Descripcion")
-    private String Descripcion;
+    public String Descripcion;
 }

@@ -19,8 +19,8 @@ public class InsertaClientesEntity {
     
      @Id
     @JsonProperty("Id_Cliente")
-    private Integer Id_Cliente;
+    public Integer Id_Cliente;
    
     @JsonProperty("Descripcion")
-    private String Descripcion;
+    public String Descripcion;
 }

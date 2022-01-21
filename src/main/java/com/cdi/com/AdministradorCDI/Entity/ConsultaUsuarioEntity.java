@@ -19,21 +19,21 @@ public class ConsultaUsuarioEntity {
 
     @Id
     @JsonProperty("Id_U")
-    private Integer Id_U;
+    public Integer Id_U;
 
     @JsonProperty("Nombre")
-    private String Nombre;
+    public String Nombre;
 
     @JsonProperty("Apellido")
-    private String Apellido;
+    public String Apellido;
 
     @JsonProperty("Usuario")
-    private String Usuario;
+    public String Usuario;
 
     @JsonProperty("Password")
-    private String Password;
+    public String Password;
 
     @JsonProperty("Cedula")
-    private String Cedula;
+    public String Cedula;
 
 }
