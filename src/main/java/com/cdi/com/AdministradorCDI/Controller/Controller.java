@@ -14,6 +14,7 @@ import com.cdi.com.AdministradorCDI.Entity.InsertaServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaTipoBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaTipoServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaUsuarioEntity;
+import com.cdi.com.AdministradorCDI.Entity.ValidaloginEntity;
 import com.cdi.com.AdministradorCDI.Services.ConsultaBackupService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaProyectosService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaRegistroBackupService;
@@ -28,6 +29,7 @@ import com.cdi.com.AdministradorCDI.Services.InsertaServidorService;
 import com.cdi.com.AdministradorCDI.Services.InsertaTipoBackupService;
 import com.cdi.com.AdministradorCDI.Services.InsertaTipoServidorService;
 import com.cdi.com.AdministradorCDI.Services.InsertaUsuarioService;
+import com.cdi.com.AdministradorCDI.Services.ValidaloginService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -88,6 +90,9 @@ public class Controller {
     @Autowired
     ConsultaTipoBackupService serviceConsultaTipoBackupService;
     
+    @Autowired
+    ValidaloginService serviceValidaloginService;
+    
     @GetMapping("/consultabackup/{Nombre_Bck}/{Ip}/{Usuario}/{Cliente}")
     public List<ConsultaBackupEntity> ConsultaBackup(
             @PathVariable String Nombre_Bck,
@@ -103,10 +108,14 @@ public class Controller {
         return serviceConsultaProyectosService.ConsultaProyect(bandera);
     }
     
-    @GetMapping("/consultaservidors/{bandera}")
+    @GetMapping("/consultaservidors/{bandera}/{NomServidor}/{SO}/{Estado}/{Usuario}")
     public List<ConsultaServidoresEntity> ConsultaServ(
-            @PathVariable Integer bandera) {
-        return serviceConsultaServidoresService.ConsultaServ(bandera);
+            @PathVariable Integer bandera,
+            @PathVariable String NomServidor,
+            @PathVariable String SO,
+            @PathVariable Integer Estado,
+            @PathVariable String Usuario) {
+        return serviceConsultaServidoresService.ConsultaServ(bandera, NomServidor, SO, Estado, Usuario);
     }
     
     @GetMapping("/consultausuarios")
@@ -234,9 +243,16 @@ public class Controller {
         return serviceConsultaRegistroBackupService.ConsultaRegistBck(entidad, Nombre_Bck);
     }
     
-    @GetMapping("/consultatipobck")
+    @PostMapping("/consultatipobck")
     public List<ConsultaTipoBackupEntity> ConsultaTipoBackup(
             @RequestBody ConsultaTipoBackupEntity entidad) {
         return serviceConsultaTipoBackupService.ConsultaTipoBackup(entidad);
     }
+
+    @PostMapping("/consultavalidlogin")
+    public List<ValidaloginEntity> ConsultaValidLogin(
+            @RequestBody ValidaloginEntity entidad) {
+        return serviceValidaloginService.ConsultaValidLogin(entidad);
+    }
+    
 }

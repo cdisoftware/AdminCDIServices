@@ -51,8 +51,8 @@ public class ConsultaServidoresEntity {
     @JsonProperty("Servidor_Aloja")
     public Integer Servidor_Aloja;
 
-    @JsonProperty("Usuario")
-    public String Usuario;
+    @JsonProperty("UsuarioUltMod")
+    public String UsuarioUltMod;
 
     @JsonProperty("Fecha_Ult_Mod")
     public String Fecha_Ult_Mod;
