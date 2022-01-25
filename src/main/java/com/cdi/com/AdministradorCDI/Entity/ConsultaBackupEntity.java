@@ -39,6 +39,9 @@ public class ConsultaBackupEntity {
     @JsonProperty("Id_Servidor")
     public Integer Id_Servidor;
 
+    @JsonProperty("NombreServidor")
+    public String NombreServidor;
+
     @JsonProperty("IpServidor")
     public String IpServidor;
 

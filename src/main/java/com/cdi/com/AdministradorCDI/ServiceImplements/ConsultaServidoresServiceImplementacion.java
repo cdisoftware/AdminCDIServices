@@ -18,11 +18,20 @@ public class ConsultaServidoresServiceImplementacion implements ConsultaServidor
     private EntityManager repositorio;
 
     @Override
-    public List<ConsultaServidoresEntity> ConsultaServ(Integer bandera) {
+    public List<ConsultaServidoresEntity> ConsultaServ(Integer bandera, String NomServidor, String SO,
+            Integer Estado, String Usuario) {
         try {
             StoredProcedureQuery conservid = repositorio.createNamedStoredProcedureQuery("paConsultaServidores");
             conservid.registerStoredProcedureParameter("bandera", Integer.class, ParameterMode.IN);
+            conservid.registerStoredProcedureParameter("NomServidor", String.class, ParameterMode.IN);
+            conservid.registerStoredProcedureParameter("SO", String.class, ParameterMode.IN);
+            conservid.registerStoredProcedureParameter("Estado", Integer.class, ParameterMode.IN);
+            conservid.registerStoredProcedureParameter("Usuario", String.class, ParameterMode.IN);
             conservid.setParameter("bandera", bandera);
+            conservid.setParameter("NomServidor", NomServidor);
+            conservid.setParameter("SO", SO);
+            conservid.setParameter("Estado", Estado);
+            conservid.setParameter("Usuario", Usuario);
             return conservid.getResultList();
         } catch (Exception e) {
             List list = new ArrayList();
