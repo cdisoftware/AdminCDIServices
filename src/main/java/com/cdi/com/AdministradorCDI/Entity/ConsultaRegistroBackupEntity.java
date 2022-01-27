@@ -19,6 +19,9 @@ import lombok.Data;
 public class ConsultaRegistroBackupEntity {
 
     @Id
+    @JsonProperty("Id")
+    public Integer Id;
+
     @JsonProperty("Id_BCK")
     public Integer Id_BCK;
 

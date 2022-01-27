@@ -18,7 +18,7 @@ public class ConsultaRegistroBackupServiceImplementacion implements ConsultaRegi
     private EntityManager repositorio;
 
     @Override
-    public List<ConsultaRegistroBackupEntity> ConsultaRegistBck(ConsultaRegistroBackupEntity entidad, Integer Nombre_Bck) {
+    public List<ConsultaRegistroBackupEntity> ConsultaRegistBck(ConsultaRegistroBackupEntity entidad,Integer Nombre_Bck) {
         try {
             StoredProcedureQuery consbackup = repositorio.createNamedStoredProcedureQuery("PaConsultaRegistroBackup");
             consbackup.registerStoredProcedureParameter("Nombre_Bck", Integer.class, ParameterMode.IN);

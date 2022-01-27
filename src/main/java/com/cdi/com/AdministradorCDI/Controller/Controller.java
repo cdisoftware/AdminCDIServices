@@ -5,11 +5,13 @@ import com.cdi.com.AdministradorCDI.Entity.ConsultaProyectosEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaRegistroBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaServidoresEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaTipoBackupEntity;
+import com.cdi.com.AdministradorCDI.Entity.ConsultaTipoServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaClientesEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaHardwareServEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaProyectoEntity;
+import com.cdi.com.AdministradorCDI.Entity.InsertaRegistroBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaTipoBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaTipoServidorEntity;
@@ -20,11 +22,13 @@ import com.cdi.com.AdministradorCDI.Services.ConsultaProyectosService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaRegistroBackupService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaServidoresService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaTipoBackupService;
+import com.cdi.com.AdministradorCDI.Services.ConsultaTipoServidorService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaUsuarioService;
 import com.cdi.com.AdministradorCDI.Services.InsertaBackupService;
 import com.cdi.com.AdministradorCDI.Services.InsertaClientesService;
 import com.cdi.com.AdministradorCDI.Services.InsertaHardwareServService;
 import com.cdi.com.AdministradorCDI.Services.InsertaProyectoService;
+import com.cdi.com.AdministradorCDI.Services.InsertaRegistroBackupService;
 import com.cdi.com.AdministradorCDI.Services.InsertaServidorService;
 import com.cdi.com.AdministradorCDI.Services.InsertaTipoBackupService;
 import com.cdi.com.AdministradorCDI.Services.InsertaTipoServidorService;
@@ -92,6 +96,12 @@ public class Controller {
     
     @Autowired
     ValidaloginService serviceValidaloginService;
+    
+    @Autowired
+    InsertaRegistroBackupService serviceInsertaRegistroBackupService;
+    
+    @Autowired
+    ConsultaTipoServidorService serviceConsultaTipoServidorService;
     
     @GetMapping("/consultabackup/{Nombre_Bck}/{Ip}/{Usuario}/{Cliente}")
     public List<ConsultaBackupEntity> ConsultaBackup(
@@ -248,11 +258,23 @@ public class Controller {
             @RequestBody ConsultaTipoBackupEntity entidad) {
         return serviceConsultaTipoBackupService.ConsultaTipoBackup(entidad);
     }
-
+    
     @PostMapping("/consultavalidlogin")
     public List<ValidaloginEntity> ConsultaValidLogin(
             @RequestBody ValidaloginEntity entidad) {
         return serviceValidaloginService.ConsultaValidLogin(entidad);
     }
     
+    @PostMapping("/insertaregistbck")
+    public String InsertaRegistroBCK(
+            @RequestBody InsertaRegistroBackupEntity entidad) {
+        return serviceInsertaRegistroBackupService.InsertaRegistroBCK(entidad);
+    }
+    
+    @PostMapping("/consultatiposerv/{IdTipoServidor}")
+    public List<ConsultaTipoServidorEntity> ConsultaTipoServidor(
+            @RequestBody ConsultaTipoServidorEntity entidad,
+            @PathVariable Integer IdTipoServidor) {
+        return serviceConsultaTipoServidorService.ConsultaTipoServidor(entidad, IdTipoServidor);
+    }
 }

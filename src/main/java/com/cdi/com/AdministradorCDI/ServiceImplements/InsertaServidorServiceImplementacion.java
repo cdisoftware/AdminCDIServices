@@ -49,7 +49,7 @@ public class InsertaServidorServiceImplementacion implements InsertaServidorServ
             insertserv.setParameter("IdUsuario", entidad.getId_U());
             insertserv.setParameter("Fecha_Ult_Mod", entidad.getFecha_Ult_Mod());
             insertserv.execute();
-            return null;
+            return JSONObject.quote((String) insertserv.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
@@ -90,7 +90,7 @@ public class InsertaServidorServiceImplementacion implements InsertaServidorServ
             actualserv.setParameter("IdUsuario", entidad.getId_U());
             actualserv.setParameter("Fecha_Ult_Mod", entidad.getFecha_Ult_Mod());
             actualserv.execute();
-            return null;
+            return JSONObject.quote((String) actualserv.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
