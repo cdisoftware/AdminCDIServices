@@ -28,7 +28,7 @@ public class InsertaClientesServiceImplementacion implements InsertaClientesServ
             insertclient.setParameter("IdCliente", entidad.getId_Cliente());
             insertclient.setParameter("Descripcion", entidad.getDescripcion());
             insertclient.execute();
-            return null;
+            return JSONObject.quote((String) insertclient.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
@@ -36,7 +36,7 @@ public class InsertaClientesServiceImplementacion implements InsertaClientesServ
 
     @Override
     public String ActualizaCliente(InsertaClientesEntity entidad, Integer Bandera) {
- try {
+        try {
             StoredProcedureQuery actualizaclient = repositorio.createNamedStoredProcedureQuery("paInsertaClientes");
             actualizaclient.registerStoredProcedureParameter("Bandera", Integer.class, ParameterMode.IN);
             actualizaclient.registerStoredProcedureParameter("IdCliente", Integer.class, ParameterMode.IN);
@@ -46,7 +46,7 @@ public class InsertaClientesServiceImplementacion implements InsertaClientesServ
             actualizaclient.setParameter("IdCliente", entidad.getId_Cliente());
             actualizaclient.setParameter("Descripcion", entidad.getDescripcion());
             actualizaclient.execute();
-            return null;
+            return JSONObject.quote((String) actualizaclient.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }

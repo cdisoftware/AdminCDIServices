@@ -28,7 +28,7 @@ public class InsertaProyectoServiceImplementacion implements InsertaProyectoServ
             insertproy.setParameter("Nombre", entidad.getNombre());
             insertproy.setParameter("IdCliente", entidad.getId_Cliente());
             insertproy.execute();
-            return null;
+            return JSONObject.quote((String) insertproy.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
@@ -48,7 +48,7 @@ public class InsertaProyectoServiceImplementacion implements InsertaProyectoServ
             actualizaproy.setParameter("Nombre", entidad.getNombre());
             actualizaproy.setParameter("IdCliente", entidad.getId_Cliente());
             actualizaproy.execute();
-            return null;
+            return JSONObject.quote((String) actualizaproy.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }

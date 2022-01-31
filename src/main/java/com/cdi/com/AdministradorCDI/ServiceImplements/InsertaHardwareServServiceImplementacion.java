@@ -30,7 +30,7 @@ public class InsertaHardwareServServiceImplementacion implements InsertaHardware
             inserthard.setParameter("RAM", entidad.getRAM());
             inserthard.setParameter("Procesador", entidad.getProcesador());
             inserthard.execute();
-            return null;
+            return JSONObject.quote((String) inserthard.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
@@ -52,7 +52,7 @@ public class InsertaHardwareServServiceImplementacion implements InsertaHardware
             actualhard.setParameter("RAM", entidad.getRAM());
             actualhard.setParameter("Procesador", entidad.getProcesador());
             actualhard.execute();
-            return null;
+            return JSONObject.quote((String) actualhard.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }

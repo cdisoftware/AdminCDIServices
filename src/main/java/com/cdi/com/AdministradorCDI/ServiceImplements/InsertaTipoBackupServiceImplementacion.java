@@ -26,7 +26,7 @@ public class InsertaTipoBackupServiceImplementacion implements InsertaTipoBackup
             insertipobackup.setParameter("IdTipoBCK", entidad.getId_Tipo_BCK());
             insertipobackup.setParameter("Descripcion", entidad.getDescripcion());
             insertipobackup.execute();
-            return null;
+            return JSONObject.quote((String) insertipobackup.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
@@ -43,7 +43,7 @@ public class InsertaTipoBackupServiceImplementacion implements InsertaTipoBackup
             actualtipobackup.setParameter("IdTipoBCK", entidad.getId_Tipo_BCK());
             actualtipobackup.setParameter("Descripcion", entidad.getDescripcion());
             actualtipobackup.execute();
-            return null;
+            return JSONObject.quote((String) actualtipobackup.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
