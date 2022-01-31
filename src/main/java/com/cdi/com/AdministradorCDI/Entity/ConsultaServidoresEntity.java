@@ -39,6 +39,9 @@ public class ConsultaServidoresEntity {
     @JsonProperty("TipoServidor")
     public String TipoServidor;
 
+    @JsonProperty("IdTipoServidor")
+    public Integer IdTipoServidor;
+
     @JsonProperty("Observacion")
     public String Observacion;
 
