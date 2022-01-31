@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedStoredProcedureQueries;
 import javax.persistence.NamedStoredProcedureQuery;
+import javax.persistence.ParameterMode;
+import javax.persistence.StoredProcedureParameter;
 import lombok.Data;
 
 @Entity
@@ -12,7 +14,12 @@ import lombok.Data;
 @NamedStoredProcedureQueries({
     @NamedStoredProcedureQuery(
             name = "paInsertaTipoServidor",
-            procedureName = "paInsertaTipoServidor")
+            procedureName = "paInsertaTipoServidor",
+            parameters = {
+                @StoredProcedureParameter(name = "Respuesta",
+                        mode = ParameterMode.OUT,
+                        type = String.class)
+            })
 })
 public class InsertaTipoServidorEntity {
 

@@ -26,7 +26,7 @@ public class InsertaTipoServidorServiceImplementacion implements InsertaTipoServ
             inserttiposerv.setParameter("IdTipoServ", entidad.getId_Tipo_S());
             inserttiposerv.setParameter("Descripcion", entidad.getDescripcion());
             inserttiposerv.execute();
-            return null;
+            return JSONObject.quote((String) inserttiposerv.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
@@ -34,7 +34,7 @@ public class InsertaTipoServidorServiceImplementacion implements InsertaTipoServ
 
     @Override
     public String ActualizaTipoServidor(InsertaTipoServidorEntity entidad, Integer Bandera) {
-    try {
+        try {
             StoredProcedureQuery actultiposerv = repositorio.createNamedStoredProcedureQuery("paInsertaTipoServidor");
             actultiposerv.registerStoredProcedureParameter("Bandera", Integer.class, ParameterMode.IN);
             actultiposerv.registerStoredProcedureParameter("IdTipoServ", Integer.class, ParameterMode.IN);
@@ -43,7 +43,7 @@ public class InsertaTipoServidorServiceImplementacion implements InsertaTipoServ
             actultiposerv.setParameter("IdTipoServ", entidad.getId_Tipo_S());
             actultiposerv.setParameter("Descripcion", entidad.getDescripcion());
             actultiposerv.execute();
-            return null;
+            return JSONObject.quote((String) actultiposerv.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
