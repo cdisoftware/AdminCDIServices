@@ -1,6 +1,7 @@
 package com.cdi.com.AdministradorCDI.Controller;
 
 import com.cdi.com.AdministradorCDI.Entity.ConsultaBackupEntity;
+import com.cdi.com.AdministradorCDI.Entity.ConsultaClienteEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaProyectosEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaRegistroBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaServidoresEntity;
@@ -18,6 +19,7 @@ import com.cdi.com.AdministradorCDI.Entity.InsertaTipoServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Entity.ValidaloginEntity;
 import com.cdi.com.AdministradorCDI.Services.ConsultaBackupService;
+import com.cdi.com.AdministradorCDI.Services.ConsultaClienteService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaProyectosService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaRegistroBackupService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaServidoresService;
@@ -102,6 +104,9 @@ public class Controller {
     
     @Autowired
     ConsultaTipoServidorService serviceConsultaTipoServidorService;
+    
+    @Autowired
+    ConsultaClienteService serviceConsultaClienteService;
     
     @GetMapping("/consultabackup/{Nombre_Bck}/{Ip}/{Usuario}/{Cliente}")
     public List<ConsultaBackupEntity> ConsultaBackup(
@@ -274,7 +279,13 @@ public class Controller {
     @PostMapping("/consultatiposerv/{IdTipoServidor}")
     public List<ConsultaTipoServidorEntity> ConsultaTipoServidor(
             @RequestBody ConsultaTipoServidorEntity entidad,
-            @PathVariable Integer IdTipoServidor) {
+            @PathVariable Integer IdTipoServidor) {//Solo cuando se envia por url algun parametro
         return serviceConsultaTipoServidorService.ConsultaTipoServidor(entidad, IdTipoServidor);
+    }
+    
+    @PostMapping("/consultacliente")
+    public List<ConsultaClienteEntity> ConsultaCliente(
+            @RequestBody ConsultaClienteEntity entidad) {
+        return serviceConsultaClienteService.ConsultaCliente(entidad);
     }
 }
