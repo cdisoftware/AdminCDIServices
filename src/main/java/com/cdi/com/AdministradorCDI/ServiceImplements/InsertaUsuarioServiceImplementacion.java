@@ -34,7 +34,7 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
             insertusuario.setParameter("Password", entidad.getPassword());
             insertusuario.setParameter("Cedula", entidad.getCedula());
             insertusuario.execute();
-            return null;
+            return JSONObject.quote((String) insertusuario.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
@@ -43,7 +43,7 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
 
     @Override
     public String ActualizaUsuario(InsertaUsuarioEntity entidad, Integer Bandera) {
-       try {
+        try {
             StoredProcedureQuery actualizausuario = repositorio.createNamedStoredProcedureQuery("paInsertaUsuario");
             actualizausuario.registerStoredProcedureParameter("Bandera", Integer.class, ParameterMode.IN);
             actualizausuario.registerStoredProcedureParameter("IdUsuario", Integer.class, ParameterMode.IN);
@@ -60,7 +60,7 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
             actualizausuario.setParameter("Password", entidad.getPassword());
             actualizausuario.setParameter("Cedula", entidad.getCedula());
             actualizausuario.execute();
-            return null;
+            return JSONObject.quote((String) actualizausuario.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
