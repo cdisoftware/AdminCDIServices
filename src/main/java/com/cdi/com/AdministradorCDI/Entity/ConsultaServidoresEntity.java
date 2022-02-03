@@ -53,6 +53,9 @@ public class ConsultaServidoresEntity {
 
     @JsonProperty("Servidor_Aloja")
     public Integer Servidor_Aloja;
+    
+    @JsonProperty("NombreServidorAloja")
+    public String NombreServidorAloja;
 
     @JsonProperty("UsuarioUltMod")
     public String UsuarioUltMod;
