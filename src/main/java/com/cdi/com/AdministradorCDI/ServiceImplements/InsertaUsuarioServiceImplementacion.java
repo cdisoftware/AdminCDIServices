@@ -43,7 +43,7 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
 
     @Override
     public String ActualizaUsuario(InsertaUsuarioEntity entidad, Integer Bandera) {
-       try {
+        try {
             StoredProcedureQuery actualizausuario = repositorio.createNamedStoredProcedureQuery("paInsertaUsuario");
             actualizausuario.registerStoredProcedureParameter("Bandera", Integer.class, ParameterMode.IN);
             actualizausuario.registerStoredProcedureParameter("IdUsuario", Integer.class, ParameterMode.IN);
