@@ -5,10 +5,12 @@ com\cdi\com\AdministradorCDI\Entity\ConsultaBackupEntity.class
 META-INF\spring-configuration-metadata.json
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaTipoServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaRegistroBackupServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Entity\ConsultaClienteEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaClientesServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ValidaloginServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaRegistroBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaClientesService.class
+com\cdi\com\AdministradorCDI\Entity\ConsultaHardwareEntity.class
 com\cdi\com\AdministradorCDI\Entity\InsertaServidorEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaServidoresEntity.class
 com\cdi\com\AdministradorCDI\Controller\Controller.class
@@ -18,6 +20,7 @@ com\cdi\com\AdministradorCDI\Entity\InsertaProyectoEntity.class
 com\cdi\com\AdministradorCDI\Services\InsertaUsuarioService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaTipoServidorService.class
 com\cdi\com\AdministradorCDI\Services\InsertaProyectoService.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaClienteServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaProyectoServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\InsertaRegistroBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\InsertaTipoServidorEntity.class
@@ -33,11 +36,13 @@ com\cdi\com\AdministradorCDI\Services\InsertaServidorService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaTipoBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\InsertaTipoBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\ValidaloginEntity.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaHardwareServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaUsuarioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaTipoServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaTipoBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaProyectosEntity.class
+com\cdi\com\AdministradorCDI\Services\ConsultaHardwareService.class
 com\cdi\com\AdministradorCDI\Services\InsertaRegistroBackupService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaHardwareServEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaServidoresServiceImplementacion.class
@@ -47,6 +52,7 @@ com\cdi\com\AdministradorCDI\Services\InsertaTipoBackupService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaUsuarioService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaBackupEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaProyectosServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Services\ConsultaClienteService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaTipoServidorEntity.class
 com\cdi\com\AdministradorCDI\Entity\InsertaUsuarioEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaBackupServiceImplementacion.class
