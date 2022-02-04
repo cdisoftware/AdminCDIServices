@@ -193,11 +193,19 @@ public class Controller {
         return serviceInsertaServidorService.InsertarServidor(entidad, Bandera);
     }
 
-    @PutMapping("/actualizaserv/{Bandera}")
-    public String ActualizarServidor(
+    @PutMapping("/actualizaservdos/{Bandera}")
+    public String ActualizarServidordos(
             @RequestBody InsertaServidorEntity entidad,
             @PathVariable Integer Bandera) {
-        return serviceInsertaServidorService.ActualizarServidor(entidad, Bandera);
+        return serviceInsertaServidorService.ActualizarServidordos(entidad, Bandera);
+    }
+    
+    @PutMapping("/actualizaservcuatro/{Bandera}/{ServidorAloja}")
+    public String ActualizarServidorcuatro(
+            @RequestBody InsertaServidorEntity entidad,
+            @PathVariable Integer Bandera,
+            @PathVariable Integer ServidorAloja) {
+        return serviceInsertaServidorService.ActualizarServidorcuatro(entidad, Bandera, ServidorAloja);
     }
 
     @PostMapping("/insertaproyecto/{Bandera}")
