@@ -122,10 +122,12 @@ public class Controller {
         return serviceConsultaBackupService.ConsultaBackup(Nombre_Bck, Ip, Usuario, Cliente);
     }
 
-    @GetMapping("/consultaproyect/{bandera}")
+    @GetMapping("/consultaproyect/{bandera}/{Nombre}/{IdCliente}")
     public List<ConsultaProyectosEntity> ConsultaProyect(
-            @PathVariable Integer bandera) {
-        return serviceConsultaProyectosService.ConsultaProyect(bandera);
+            @PathVariable Integer bandera,
+            @PathVariable String Nombre,
+            @PathVariable Integer IdCliente) {
+        return serviceConsultaProyectosService.ConsultaProyect(bandera, Nombre, IdCliente);
     }
 
     @GetMapping("/consultaservidors/{bandera}/{NomServidor}/{SO}/{Estado}/{Usuario}")

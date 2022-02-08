@@ -25,6 +25,7 @@ public class ConsultaRegistroBackupServiceImplementacion implements ConsultaRegi
             consbackup.registerStoredProcedureParameter("Fecha", String.class, ParameterMode.IN);
             consbackup.registerStoredProcedureParameter("Estado", Integer.class, ParameterMode.IN);
             consbackup.registerStoredProcedureParameter("Usuario", Integer.class, ParameterMode.IN);
+            
             consbackup.setParameter("Nombre_Bck", Nombre_Bck);
             consbackup.setParameter("Fecha", entidad.getFecha());
             consbackup.setParameter("Estado", entidad.getEstado());

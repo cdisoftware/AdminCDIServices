@@ -25,6 +25,9 @@ public class ConsultaProyectosEntity {
     @JsonProperty("Nombre")
     public String Nombre;
 
-    @JsonProperty("Descripcion")
-    public String Descripcion;
+    @JsonProperty("Id_Cliente")
+    public Integer Id_Cliente;
+    
+    @JsonProperty("DescripcionCliente")
+    public String DescripcionCliente;
 }
