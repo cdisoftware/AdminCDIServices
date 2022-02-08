@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ConsultaProyectosService {
  
-    public List<ConsultaProyectosEntity> ConsultaProyect(Integer bandera);
+    public List<ConsultaProyectosEntity> ConsultaProyect(Integer bandera, String Nombre, Integer IdCliente);
 }
