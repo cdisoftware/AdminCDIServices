@@ -19,11 +19,16 @@ public class ConsultaProyectosServiceImplementacion implements ConsultaProyectos
     private EntityManager repositorio;
 
     @Override
-    public List<ConsultaProyectosEntity> ConsultaProyect(Integer bandera) {
+    public List<ConsultaProyectosEntity> ConsultaProyect(Integer bandera, String Nombre, Integer IdCliente) {
         try {
             StoredProcedureQuery consProyect = repositorio.createNamedStoredProcedureQuery("PaConsultaProyectos");
              consProyect.registerStoredProcedureParameter("bandera", Integer.class, ParameterMode.IN);
-                      consProyect.setParameter("bandera", bandera);
+             consProyect.registerStoredProcedureParameter("Nombre", String.class, ParameterMode.IN);
+             consProyect.registerStoredProcedureParameter("IdCliente", Integer.class, ParameterMode.IN);
+             
+             consProyect.setParameter("bandera", bandera);
+             consProyect.setParameter("Nombre", Nombre);
+             consProyect.setParameter("IdCliente", IdCliente);
           
             return consProyect.getResultList();
         } catch (Exception e) {
