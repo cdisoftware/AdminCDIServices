@@ -25,6 +25,7 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaTipoServidorServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaBackupService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaTipoBackupService.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaGrilaProyecBckService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\InsertaRegistroBackupServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\InsertaTipoBackupService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ValidaloginEntity.java
@@ -41,6 +42,7 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Comun\clsEncriptacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\AdministradorCDIApplication.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\InsertaUsuarioService.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ConsultaGrilaProyecBckEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ConsultaProyectosEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\InsertaClientesServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Controller\Controller.java
@@ -59,3 +61,4 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaHardwareService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\InsertaTipoBackupEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaTipoServidorService.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaGrilaProyecBckServiceImplementacion.java
