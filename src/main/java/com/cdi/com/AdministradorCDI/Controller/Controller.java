@@ -2,6 +2,7 @@ package com.cdi.com.AdministradorCDI.Controller;
 
 import com.cdi.com.AdministradorCDI.Entity.ConsultaBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaClienteEntity;
+import com.cdi.com.AdministradorCDI.Entity.ConsultaGrilaProyecBckEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaHardwareEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaProyectosEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaRegistroBackupEntity;
@@ -21,6 +22,7 @@ import com.cdi.com.AdministradorCDI.Entity.InsertaUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Entity.ValidaloginEntity;
 import com.cdi.com.AdministradorCDI.Services.ConsultaBackupService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaClienteService;
+import com.cdi.com.AdministradorCDI.Services.ConsultaGrilaProyecBckService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaHardwareService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaProyectosService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaRegistroBackupService;
@@ -112,6 +114,9 @@ public class Controller {
 
     @Autowired
     ConsultaHardwareService serviceConsultaHardwareService;
+    
+    @Autowired
+    ConsultaGrilaProyecBckService serviceConsultaGrilaProyecBckService;
 
     @GetMapping("/consultabackup/{Nombre_Bck}/{Ip}/{Usuario}/{Cliente}")
     public List<ConsultaBackupEntity> ConsultaBackup(
@@ -311,5 +316,11 @@ public class Controller {
             @PathVariable String Ram,
             @PathVariable String Procesador) {
         return serviceConsultaHardwareService.ConsultaHardware(IdServidor, DiscoDuro, Ram, Procesador);
+    }
+    
+      @GetMapping("/consgrilaproyectbck/{IdProyecto}")
+    public List<ConsultaGrilaProyecBckEntity> ConsultaGrilaProyectBck(
+            @PathVariable Integer IdProyecto) {
+        return serviceConsultaGrilaProyecBckService.ConsultaGrilaProyectBck(IdProyecto);
     }
 }

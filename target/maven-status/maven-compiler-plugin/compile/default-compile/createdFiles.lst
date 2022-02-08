@@ -5,6 +5,7 @@ com\cdi\com\AdministradorCDI\Entity\ConsultaBackupEntity.class
 META-INF\spring-configuration-metadata.json
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaTipoServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaRegistroBackupServiceImplementacion.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaGrilaProyecBckServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaClienteEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaClientesServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ValidaloginServiceImplementacion.class
@@ -35,6 +36,7 @@ com\cdi\com\AdministradorCDI\Entity\ConsultaRegistroBackupEntity.class
 com\cdi\com\AdministradorCDI\Services\InsertaServidorService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaTipoBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\InsertaTipoBackupEntity.class
+com\cdi\com\AdministradorCDI\Entity\ConsultaGrilaProyecBckEntity.class
 com\cdi\com\AdministradorCDI\Entity\ValidaloginEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaHardwareServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaUsuarioServiceImplementacion.class
@@ -54,6 +56,7 @@ com\cdi\com\AdministradorCDI\Entity\InsertaBackupEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaProyectosServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaClienteService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaTipoServidorEntity.class
+com\cdi\com\AdministradorCDI\Services\ConsultaGrilaProyecBckService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaUsuarioEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Comun\FileStorageProperties.class
