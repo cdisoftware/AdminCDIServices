@@ -35,5 +35,8 @@ public class ConsultaUsuarioEntity {
 
     @JsonProperty("Cedula")
     public String Cedula;
+    
+    @JsonProperty("UserAdmin")
+    public Integer UserAdmin;
 
 }
