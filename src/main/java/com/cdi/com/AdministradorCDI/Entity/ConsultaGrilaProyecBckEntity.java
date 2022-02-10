@@ -21,6 +21,9 @@ public class ConsultaGrilaProyecBckEntity {
     @JsonProperty("Id_B")
     public Integer Id_B;
 
+    @JsonProperty("NomCliente")
+    public String NomCliente;
+    
     @JsonProperty("IdentificadorProyecto")
     public Integer IdentificadorProyecto;
 
@@ -29,9 +32,6 @@ public class ConsultaGrilaProyecBckEntity {
 
     @JsonProperty("Id_Cliente")
     public Integer Id_Cliente;
-
-    @JsonProperty("Cliente")
-    public String Cliente;
 
     @JsonProperty("BackupAsociado")
     public String BackupAsociado;
