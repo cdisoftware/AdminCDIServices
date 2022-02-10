@@ -11,8 +11,13 @@ import com.cdi.com.AdministradorCDI.Entity.ConsultaTipoBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaTipoServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Entity.EliminaBackupEntity;
+import com.cdi.com.AdministradorCDI.Entity.EliminaClienteEntity;
+import com.cdi.com.AdministradorCDI.Entity.EliminaHardwareEntity;
+import com.cdi.com.AdministradorCDI.Entity.EliminaProyectoEntity;
 import com.cdi.com.AdministradorCDI.Entity.EliminaRegistroBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.EliminaServidorEntity;
+import com.cdi.com.AdministradorCDI.Entity.EliminaTipoBackupEntity;
+import com.cdi.com.AdministradorCDI.Entity.EliminaTipoServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.EliminaUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaClientesEntity;
@@ -35,8 +40,13 @@ import com.cdi.com.AdministradorCDI.Services.ConsultaTipoBackupService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaTipoServidorService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaUsuarioService;
 import com.cdi.com.AdministradorCDI.Services.EliminaBackupService;
+import com.cdi.com.AdministradorCDI.Services.EliminaClienteService;
+import com.cdi.com.AdministradorCDI.Services.EliminaHardwareService;
+import com.cdi.com.AdministradorCDI.Services.EliminaProyectoService;
 import com.cdi.com.AdministradorCDI.Services.EliminaRegistroBackupService;
 import com.cdi.com.AdministradorCDI.Services.EliminaServidorService;
+import com.cdi.com.AdministradorCDI.Services.EliminaTipoBackupService;
+import com.cdi.com.AdministradorCDI.Services.EliminaTipoServidorService;
 import com.cdi.com.AdministradorCDI.Services.EliminaUsuarioService;
 import com.cdi.com.AdministradorCDI.Services.InsertaBackupService;
 import com.cdi.com.AdministradorCDI.Services.InsertaClientesService;
@@ -138,6 +148,21 @@ public class Controller {
     
     @Autowired
     EliminaServidorService serviceEliminaServidorService;
+    
+    @Autowired
+    EliminaProyectoService serviceEliminaProyectoService;
+    
+    @Autowired
+    EliminaTipoBackupService serviceEliminaTipoBackupService;
+    
+    @Autowired
+    EliminaTipoServidorService serviceEliminaTipoServidorService;
+    
+    @Autowired
+    EliminaHardwareService serviceEliminaHardwareService;
+    
+    @Autowired
+    EliminaClienteService serviceEliminaClienteService;
     
     @GetMapping("/consultabackup/{Nombre_Bck}/{Ip}/{Usuario}/{Cliente}")
     public List<ConsultaBackupEntity> ConsultaBackup(
@@ -371,5 +396,40 @@ public class Controller {
             @RequestBody EliminaServidorEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaServidorService.EliminaServidor(entidad, bandera);
+    }
+    
+    @DeleteMapping("/eliminaproyect/{bandera}")
+    public String EliminaProyect(
+            @RequestBody EliminaProyectoEntity entidad,
+            @PathVariable Integer bandera) {
+        return serviceEliminaProyectoService.EliminaProyect(entidad, bandera);
+    }
+    
+    @DeleteMapping("/eliminatipobck/{bandera}")
+    public String EliminaTipoBCK(
+            @RequestBody EliminaTipoBackupEntity entidad,
+            @PathVariable Integer bandera) {
+        return serviceEliminaTipoBackupService.EliminaTipoBCK(entidad, bandera);
+    }
+    
+    @DeleteMapping("/eliminatiposerv/{bandera}")
+    public String EliminaTipoServ(
+            @RequestBody EliminaTipoServidorEntity entidad,
+            @PathVariable Integer bandera) {
+        return serviceEliminaTipoServidorService.EliminaTipoServ(entidad, bandera);
+    }
+    
+    @DeleteMapping("/eliminahardserv/{bandera}")
+    public String EliminaHardServ(
+            @RequestBody EliminaHardwareEntity entidad,
+            @PathVariable Integer bandera) {
+        return serviceEliminaHardwareService.EliminaHardServ(entidad, bandera);
+    }
+    
+    @DeleteMapping("/eliminaclient/{bandera}")
+    public String EliminaClient(
+            @RequestBody EliminaClienteEntity entidad,
+            @PathVariable Integer bandera) {
+        return serviceEliminaClienteService.EliminaClient(entidad, bandera);
     }
 }
