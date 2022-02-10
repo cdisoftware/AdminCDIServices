@@ -41,4 +41,10 @@ public class InsertaUsuarioEntity {
 
     @JsonProperty("Cedula")
     public String Cedula;
+    
+    @JsonProperty("UserAdmin")
+    public Integer UserAdmin;
+    
+    @JsonProperty("UrlFoto")
+    public String UrlFoto;
 }

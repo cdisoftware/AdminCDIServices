@@ -35,6 +35,12 @@ public class ValidaloginEntity {
 
     @JsonProperty("Cedula")
     public String Cedula;
+    
+    @JsonProperty("UserAdmin")
+    public Integer UserAdmin;
+    
+    @JsonProperty("UrlFoto")
+    public Integer UrlFoto;
 
     @JsonProperty("RESPUESTA")
     public String RESPUESTA;
