@@ -26,6 +26,7 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
             insertusuario.registerStoredProcedureParameter("Usuario", String.class, ParameterMode.IN);
             insertusuario.registerStoredProcedureParameter("Password", String.class, ParameterMode.IN);
             insertusuario.registerStoredProcedureParameter("Cedula", String.class, ParameterMode.IN);
+            insertusuario.registerStoredProcedureParameter("UserAdmin", Integer.class, ParameterMode.IN);
             insertusuario.setParameter("Bandera", Bandera);
             insertusuario.setParameter("IdUsuario", entidad.getId_U());
             insertusuario.setParameter("Nombre", entidad.getNombre());
@@ -33,6 +34,8 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
             insertusuario.setParameter("Usuario", entidad.getUsuario());
             insertusuario.setParameter("Password", entidad.getPassword());
             insertusuario.setParameter("Cedula", entidad.getCedula());
+            insertusuario.setParameter("UserAdmin", entidad.getUserAdmin());
+
             insertusuario.execute();
             return JSONObject.quote((String) insertusuario.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
@@ -52,6 +55,7 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
             actualizausuario.registerStoredProcedureParameter("Usuario", String.class, ParameterMode.IN);
             actualizausuario.registerStoredProcedureParameter("Password", String.class, ParameterMode.IN);
             actualizausuario.registerStoredProcedureParameter("Cedula", String.class, ParameterMode.IN);
+            actualizausuario.registerStoredProcedureParameter("UserAdmin", Integer.class, ParameterMode.IN);
             actualizausuario.setParameter("Bandera", Bandera);
             actualizausuario.setParameter("IdUsuario", entidad.getId_U());
             actualizausuario.setParameter("Nombre", entidad.getNombre());
@@ -59,6 +63,7 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
             actualizausuario.setParameter("Usuario", entidad.getUsuario());
             actualizausuario.setParameter("Password", entidad.getPassword());
             actualizausuario.setParameter("Cedula", entidad.getCedula());
+            actualizausuario.setParameter("UserAdmin", entidad.getUserAdmin());
             actualizausuario.execute();
             return JSONObject.quote((String) actualizausuario.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
