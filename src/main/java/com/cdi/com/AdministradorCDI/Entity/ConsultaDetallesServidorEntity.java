@@ -30,6 +30,9 @@ public class ConsultaDetallesServidorEntity {
     @JsonProperty("Servidor_Aloja")
     public String Servidor_Aloja;
 
+    @JsonProperty("NombreServidorAloja")
+    public String NombreServidorAloja;
+
     @JsonProperty("DiscoDuro")
     public String DiscoDuro;
 

@@ -40,7 +40,7 @@ public class UpdateDetalleServidorServiceImplementacion implements UpdateDetalle
             rolbackup.setParameter("IdUsuario", entidad.getId_U());
             rolbackup.setParameter("Fecha", entidad.getFecha_Ult_Mod());
             rolbackup.execute();
-            return null;
+            return JSONObject.quote((String) rolbackup.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }

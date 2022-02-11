@@ -14,7 +14,12 @@ import lombok.Data;
 @NamedStoredProcedureQueries({
     @NamedStoredProcedureQuery(
             name = "PaUpdateDetalleServidor",
-            procedureName = "PaUpdateDetalleServidor")
+            procedureName = "PaUpdateDetalleServidor",
+            parameters = {
+                @StoredProcedureParameter(name = "Respuesta",
+                        mode = ParameterMode.OUT,
+                        type = String.class)
+            })
 })
 public class UpdateDetalleServidorEntity {
 
