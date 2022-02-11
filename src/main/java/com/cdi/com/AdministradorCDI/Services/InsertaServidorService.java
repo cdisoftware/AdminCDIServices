@@ -7,6 +7,5 @@ public interface InsertaServidorService {
     public String InsertarServidor(InsertaServidorEntity entidad, Integer Bandera);
 
     public String ActualizarServidordos(InsertaServidorEntity entidad, Integer Bandera);
-    public String ActualizarServidorcuatro(InsertaServidorEntity entidad, Integer Bandera, Integer ServidorAloja);
 
 }

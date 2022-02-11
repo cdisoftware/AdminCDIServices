@@ -37,26 +37,4 @@ public class InsertaHardwareServServiceImplementacion implements InsertaHardware
 
     }
 
-    @Override
-    public String ActualizarHardServ(InsertaHardwareServEntity entidad, Integer Bandera) {
-        try {
-            StoredProcedureQuery actualhard = repositorio.createNamedStoredProcedureQuery("paInsertaHardwareServ");
-            actualhard.registerStoredProcedureParameter("Bandera", Integer.class, ParameterMode.IN);
-            actualhard.registerStoredProcedureParameter("IdServidor", Integer.class, ParameterMode.IN);
-            actualhard.registerStoredProcedureParameter("DiscoDuro", String.class, ParameterMode.IN);
-            actualhard.registerStoredProcedureParameter("RAM", String.class, ParameterMode.IN);
-            actualhard.registerStoredProcedureParameter("Procesador", String.class, ParameterMode.IN);
-            actualhard.setParameter("Bandera", Bandera);
-            actualhard.setParameter("IdServidor", entidad.getId_S());
-            actualhard.setParameter("DiscoDuro", entidad.getDiscoDuro());
-            actualhard.setParameter("RAM", entidad.getRAM());
-            actualhard.setParameter("Procesador", entidad.getProcesador());
-            actualhard.execute();
-            return JSONObject.quote((String) actualhard.getOutputParameterValue("Respuesta"));
-        } catch (Exception ex) {
-            return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
-        }
-
-    }
-
 }
