@@ -30,6 +30,7 @@ import com.cdi.com.AdministradorCDI.Entity.InsertaTipoBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaTipoServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Entity.UpdateDetalleServidorEntity;
+import com.cdi.com.AdministradorCDI.Entity.UpdateInfoUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Entity.ValidaloginEntity;
 import com.cdi.com.AdministradorCDI.Services.ConsultaBackupService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaClienteService;
@@ -61,6 +62,7 @@ import com.cdi.com.AdministradorCDI.Services.InsertaTipoBackupService;
 import com.cdi.com.AdministradorCDI.Services.InsertaTipoServidorService;
 import com.cdi.com.AdministradorCDI.Services.InsertaUsuarioService;
 import com.cdi.com.AdministradorCDI.Services.UpdateDetalleServidorService;
+import com.cdi.com.AdministradorCDI.Services.UpdateInfoUsuarioService;
 import com.cdi.com.AdministradorCDI.Services.ValidaloginService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -173,6 +175,10 @@ public class Controller {
 
     @Autowired
     UpdateDetalleServidorService serviceUpdateDetalleServidorService;
+    
+    @Autowired
+    UpdateInfoUsuarioService serviceUpdateInfoUsuarioService;
+    
 
     @GetMapping("/consultabackup/{Nombre_Bck}/{Ip}/{Usuario}/{Cliente}")
     public List<ConsultaBackupEntity> ConsultaBackup(
@@ -439,5 +445,12 @@ public class Controller {
     public String UpdateDetllServ(
             @RequestBody UpdateDetalleServidorEntity entidad) {
         return serviceUpdateDetalleServidorService.UpdateDetllServ(entidad);
+    }
+    
+    @PutMapping("/actualizainfousuario/{Bandera}")
+    public String ActualizaInfoUser(
+            @RequestBody UpdateInfoUsuarioEntity entidad,
+            @PathVariable Integer Bandera) {
+        return serviceUpdateInfoUsuarioService.ActualizaInfoUser(entidad, Bandera);
     }
 }
