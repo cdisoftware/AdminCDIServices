@@ -1,4 +1,5 @@
 com\cdi\com\AdministradorCDI\ServiceImplements\UpdateDetalleServidorServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Services\UpdateInfoUsuarioService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaRegistroBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaBackupEntity.class
 META-INF\spring-configuration-metadata.json
@@ -10,6 +11,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\EliminaProyectoServiceImplementac
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaRegistroBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaClientesService.class
 com\cdi\com\AdministradorCDI\Services\EliminaProyectoService.class
+com\cdi\com\AdministradorCDI\ServiceImplements\UpdateInfoUsuarioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaHardwareEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaTipoBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Comun\clsEncriptacion.class
@@ -42,6 +44,7 @@ com\cdi\com\AdministradorCDI\Services\ConsultaUsuarioService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaBackupEntity.class
 com\cdi\com\AdministradorCDI\Services\ConsultaClienteService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaBackupServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Entity\UpdateInfoUsuarioEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaHardwareEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaRegistroBackupEntity.class
 com\cdi\com\AdministradorCDI\Services\ConsultaBackupService.class
