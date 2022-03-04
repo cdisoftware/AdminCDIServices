@@ -30,6 +30,7 @@ public class InsertaServicioServiceImplementacion implements InsertaServicioServ
             insertserv.registerStoredProcedureParameter("Estado", Integer.class, ParameterMode.IN);
             insertserv.registerStoredProcedureParameter("IdUsuarioAsigna", Integer.class, ParameterMode.IN);
             insertserv.registerStoredProcedureParameter("Observacion", String.class, ParameterMode.IN);
+            insertserv.registerStoredProcedureParameter("Observaciones", String.class, ParameterMode.IN);
             insertserv.registerStoredProcedureParameter("Prioridad", String.class, ParameterMode.IN);
 
             insertserv.setParameter("bandera", bandera);
@@ -43,6 +44,7 @@ public class InsertaServicioServiceImplementacion implements InsertaServicioServ
             insertserv.setParameter("Estado", entidad.getEstado());
             insertserv.setParameter("IdUsuarioAsigna", entidad.getIdUsuarioAsigna());
             insertserv.setParameter("Observacion", entidad.getObservacion());
+            insertserv.setParameter("Observaciones", entidad.getObservaciones());
             insertserv.setParameter("Prioridad", entidad.getPrioridad());
 
             insertserv.execute();
@@ -68,6 +70,7 @@ public class InsertaServicioServiceImplementacion implements InsertaServicioServ
             actserv.registerStoredProcedureParameter("Estado", Integer.class, ParameterMode.IN);
             actserv.registerStoredProcedureParameter("IdUsuarioAsigna", Integer.class, ParameterMode.IN);
             actserv.registerStoredProcedureParameter("Observacion", String.class, ParameterMode.IN);
+            actserv.registerStoredProcedureParameter("Observaciones", String.class, ParameterMode.IN);
             actserv.registerStoredProcedureParameter("Prioridad", String.class, ParameterMode.IN);
 
             actserv.setParameter("bandera", bandera);
@@ -80,6 +83,7 @@ public class InsertaServicioServiceImplementacion implements InsertaServicioServ
             actserv.setParameter("TipoServicio", entidad.getTipoServicio());
             actserv.setParameter("Estado", entidad.getEstado());
             actserv.setParameter("IdUsuarioAsigna", entidad.getIdUsuarioAsigna());
+            actserv.setParameter("Observacion", entidad.getObservacion());
             actserv.setParameter("Observacion", entidad.getObservacion());
             actserv.setParameter("Prioridad", entidad.getPrioridad());
 

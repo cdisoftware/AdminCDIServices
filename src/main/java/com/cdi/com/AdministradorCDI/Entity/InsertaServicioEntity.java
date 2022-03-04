@@ -54,6 +54,9 @@ public class InsertaServicioEntity {
     @JsonProperty("Observacion")
     public String Observacion;
 
+    @JsonProperty("Observaciones")
+    public String Observaciones;
+
     @JsonProperty("Prioridad")
     public String Prioridad;
 
