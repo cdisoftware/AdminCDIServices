@@ -43,9 +43,11 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\EliminaBackupServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\EliminaTipoServidorService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Comun\clsEncriptacion.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ModImgService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\EliminaTipoServidorEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\AdministradorCDIApplication.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ConsultaGrilaProyecBckEntity.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ModImgEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\InsertaClientesServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\EliminaTipoBackupEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaProyectosService.java
@@ -92,6 +94,7 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\EliminaTipoBackupServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\EliminaBackupEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\InsertaUsuarioService.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\ModImgServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\EliminaUsuarioServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ConsultaProyectosEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Controller\Controller.java

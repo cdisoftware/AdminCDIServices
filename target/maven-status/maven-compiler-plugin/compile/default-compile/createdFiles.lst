@@ -47,6 +47,7 @@ com\cdi\com\AdministradorCDI\Services\ConsultaUsuarioService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\UploadFileResponse.class
 com\cdi\com\AdministradorCDI\Services\ConsultaClienteService.class
+com\cdi\com\AdministradorCDI\Services\ModImgService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaServiciosService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\UpdateInfoUsuarioEntity.class
@@ -75,6 +76,7 @@ com\cdi\com\AdministradorCDI\Services\InsertaProyectoService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaRegistroBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaClienteEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaUsuarioServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Entity\ModImgEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaHardwareServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaProyectosService.class
 com\cdi\com\AdministradorCDI\Services\InsertaBackupService.class
@@ -106,6 +108,7 @@ com\cdi\com\AdministradorCDI\Services\ConsultaGrilaProyecBckService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaUsuarioEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Comun\FileStorageProperties.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ModImgServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaRegistroBackupService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaTipoServidorService.class

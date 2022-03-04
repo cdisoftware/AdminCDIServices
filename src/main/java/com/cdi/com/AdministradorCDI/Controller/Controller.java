@@ -31,6 +31,7 @@ import com.cdi.com.AdministradorCDI.Entity.InsertaServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaTipoBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaTipoServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaUsuarioEntity;
+import com.cdi.com.AdministradorCDI.Entity.ModImgEntity;
 import com.cdi.com.AdministradorCDI.Entity.UpdateDetalleServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.UpdateInfoUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Entity.UploadFileResponse;
@@ -68,6 +69,7 @@ import com.cdi.com.AdministradorCDI.Services.InsertaServidorService;
 import com.cdi.com.AdministradorCDI.Services.InsertaTipoBackupService;
 import com.cdi.com.AdministradorCDI.Services.InsertaTipoServidorService;
 import com.cdi.com.AdministradorCDI.Services.InsertaUsuarioService;
+import com.cdi.com.AdministradorCDI.Services.ModImgService;
 import com.cdi.com.AdministradorCDI.Services.UpdateDetalleServidorService;
 import com.cdi.com.AdministradorCDI.Services.UpdateInfoUsuarioService;
 import com.cdi.com.AdministradorCDI.Services.ValidaloginService;
@@ -200,6 +202,9 @@ public class Controller {
     
     @Autowired
     InsertaServicioService serviceInsertaServicioService;
+    
+    @Autowired
+    ModImgService serviceModImgService;
     
     @GetMapping("/consultabackup/{Nombre_Bck}/{Ip}/{Usuario}/{Cliente}")
     public List<ConsultaBackupEntity> ConsultaBackup(
@@ -514,11 +519,19 @@ public class Controller {
             @PathVariable Integer bandera) {
         return serviceInsertaServicioService.InsertaServicio(entidad, bandera);
     }
-
+    
     @PutMapping("/actualizaservicio/{bandera}")
     public String ActualizaServicio(
             @RequestBody InsertaServicioEntity entidad,
             @PathVariable Integer bandera) {
         return serviceInsertaServicioService.ActualizaServicio(entidad, bandera);
     }
+
+    @PutMapping("/modificaimagen/{IdUsuario}")
+    public String ActualizaImagen(
+            @RequestBody ModImgEntity entidad,
+            @PathVariable Integer IdUsuario) {
+        return serviceModImgService.ActualizaImagen(entidad, IdUsuario);
+    }
+    
 }
