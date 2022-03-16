@@ -40,7 +40,7 @@ public class ValidaloginEntity {
     public Integer UserAdmin;
     
     @JsonProperty("UrlFoto")
-    public Integer UrlFoto;
+    public String UrlFoto;
 
     @JsonProperty("RESPUESTA")
     public String RESPUESTA;

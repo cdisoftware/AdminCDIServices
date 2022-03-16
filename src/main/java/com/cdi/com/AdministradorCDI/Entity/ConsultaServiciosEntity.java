@@ -69,4 +69,10 @@ public class ConsultaServiciosEntity {
     @JsonProperty("Observaciones")
     public String Observaciones;
 
+    @JsonProperty("ConsumeServicio")
+    public String ConsumeServicio;
+
+    @JsonProperty("UrlServicio")
+    public String UrlServicio;
+
 }

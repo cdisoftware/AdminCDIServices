@@ -32,7 +32,6 @@ public class InsertaServicioServiceImplementacion implements InsertaServicioServ
             insertserv.registerStoredProcedureParameter("Observacion", String.class, ParameterMode.IN);
             insertserv.registerStoredProcedureParameter("Observaciones", String.class, ParameterMode.IN);
             insertserv.registerStoredProcedureParameter("Prioridad", String.class, ParameterMode.IN);
-
             insertserv.setParameter("bandera", bandera);
             insertserv.setParameter("IdServicios", entidad.getIdServicios());
             insertserv.setParameter("IdProyecto", entidad.getIdProyecto());
@@ -46,7 +45,6 @@ public class InsertaServicioServiceImplementacion implements InsertaServicioServ
             insertserv.setParameter("Observacion", entidad.getObservacion());
             insertserv.setParameter("Observaciones", entidad.getObservaciones());
             insertserv.setParameter("Prioridad", entidad.getPrioridad());
-
             insertserv.execute();
             return JSONObject.quote((String) insertserv.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
@@ -72,7 +70,6 @@ public class InsertaServicioServiceImplementacion implements InsertaServicioServ
             actserv.registerStoredProcedureParameter("Observacion", String.class, ParameterMode.IN);
             actserv.registerStoredProcedureParameter("Observaciones", String.class, ParameterMode.IN);
             actserv.registerStoredProcedureParameter("Prioridad", String.class, ParameterMode.IN);
-
             actserv.setParameter("bandera", bandera);
             actserv.setParameter("IdServicios", entidad.getIdServicios());
             actserv.setParameter("IdProyecto", entidad.getIdProyecto());
@@ -86,7 +83,6 @@ public class InsertaServicioServiceImplementacion implements InsertaServicioServ
             actserv.setParameter("Observacion", entidad.getObservacion());
             actserv.setParameter("Observacion", entidad.getObservacion());
             actserv.setParameter("Prioridad", entidad.getPrioridad());
-
             actserv.execute();
             return JSONObject.quote((String) actserv.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {

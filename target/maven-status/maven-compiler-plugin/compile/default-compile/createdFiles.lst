@@ -1,6 +1,7 @@
 com\cdi\com\AdministradorCDI\ServiceImplements\UpdateDetalleServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\UpdateInfoUsuarioService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaServiciosEntity.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaDesarollosPendientesServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaRegistroBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaBackupEntity.class
 META-INF\spring-configuration-metadata.json
@@ -14,6 +15,7 @@ com\cdi\com\AdministradorCDI\Services\InsertaClientesService.class
 com\cdi\com\AdministradorCDI\Services\EliminaProyectoService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\UpdateInfoUsuarioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaHardwareEntity.class
+com\cdi\com\AdministradorCDI\Entity\EliminaServicioEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaTipoBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Comun\clsEncriptacion.class
 com\cdi\com\AdministradorCDI\Entity\InsertaProyectoEntity.class
@@ -21,7 +23,10 @@ com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaClienteServiceImplementac
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaProyectoServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\InsertaTipoServidorEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaClienteServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Services\ConsultaInfoUserService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaHardwareServServiceImplementacion.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaInfoUserServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Entity\ConsultaInfoUserEntity.class
 com\cdi\com\AdministradorCDI\Entity\InsertaClientesEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaRegistroBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaServidorEntity.class
@@ -29,6 +34,7 @@ com\cdi\com\AdministradorCDI\Entity\InsertaTipoBackupEntity.class
 com\cdi\com\AdministradorCDI\Services\EliminaTipoBackupService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaGrilaProyecBckEntity.class
 com\cdi\com\AdministradorCDI\Entity\ValidaloginEntity.class
+com\cdi\com\AdministradorCDI\Entity\ConsultaDesarollosPendientesEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaTipoServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\EliminaBackupEntity.class
@@ -37,6 +43,7 @@ com\cdi\com\AdministradorCDI\Services\InsertaServicioService.class
 com\cdi\com\AdministradorCDI\Services\EliminaRegistroBackupService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\FileStorageException.class
 com\cdi\com\AdministradorCDI\Services\ConsultaHardwareService.class
+.netbeans_automatic_build
 com\cdi\com\AdministradorCDI\Entity\InsertaHardwareServEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaUsuarioEntity.class
 com\cdi\com\AdministradorCDI\Services\ConsultaTipoBackupService.class
@@ -66,12 +73,14 @@ com\cdi\com\AdministradorCDI\ServiceImplements\ValidaloginServiceImplementacion.
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaServicioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\MyFileNotFoundException.class
 com\cdi\com\AdministradorCDI\Services\ConsultaDetallesServidorService.class
+com\cdi\com\AdministradorCDI\Services\ConsultaDesarollosPendientesService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaServidorEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaServidoresEntity.class
 com\cdi\com\AdministradorCDI\Controller\Controller.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaDetallesServidorEntity.class
 com\cdi\com\AdministradorCDI\Services\InsertaUsuarioService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaTipoServidorService.class
+com\cdi\com\AdministradorCDI\ServiceImplements\EliminaServicioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaProyectoService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaRegistroBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaClienteEntity.class
@@ -110,5 +119,6 @@ com\cdi\com\AdministradorCDI\ServiceImplements\InsertaBackupServiceImplementacio
 com\cdi\com\AdministradorCDI\Comun\FileStorageProperties.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ModImgServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaRegistroBackupService.class
+com\cdi\com\AdministradorCDI\Services\EliminaServicioService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaTipoServidorService.class
