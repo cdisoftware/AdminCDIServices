@@ -34,6 +34,7 @@ com\cdi\com\AdministradorCDI\Entity\InsertaTipoBackupEntity.class
 com\cdi\com\AdministradorCDI\Services\EliminaTipoBackupService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaGrilaProyecBckEntity.class
 com\cdi\com\AdministradorCDI\Entity\ValidaloginEntity.class
+com\cdi\com\AdministradorCDI\ServiceImplements\UpdateServicioRealizadoServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaDesarollosPendientesEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaTipoServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaServidorServiceImplementacion.class
@@ -43,7 +44,6 @@ com\cdi\com\AdministradorCDI\Services\InsertaServicioService.class
 com\cdi\com\AdministradorCDI\Services\EliminaRegistroBackupService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\FileStorageException.class
 com\cdi\com\AdministradorCDI\Services\ConsultaHardwareService.class
-.netbeans_automatic_build
 com\cdi\com\AdministradorCDI\Entity\InsertaHardwareServEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaUsuarioEntity.class
 com\cdi\com\AdministradorCDI\Services\ConsultaTipoBackupService.class
@@ -57,6 +57,7 @@ com\cdi\com\AdministradorCDI\Services\ConsultaClienteService.class
 com\cdi\com\AdministradorCDI\Services\ModImgService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaServiciosService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaBackupServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Services\UpdateServicioRealizadoService.class
 com\cdi\com\AdministradorCDI\Entity\UpdateInfoUsuarioEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaHardwareEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaRegistroBackupEntity.class
@@ -83,6 +84,7 @@ com\cdi\com\AdministradorCDI\Services\ConsultaTipoServidorService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaServicioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaProyectoService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaRegistroBackupEntity.class
+com\cdi\com\AdministradorCDI\Entity\UpdateServicioRealizadoEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaClienteEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaUsuarioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ModImgEntity.class
