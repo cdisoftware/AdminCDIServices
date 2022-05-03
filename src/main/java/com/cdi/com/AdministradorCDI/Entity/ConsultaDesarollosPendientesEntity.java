@@ -45,4 +45,13 @@ public class ConsultaDesarollosPendientesEntity {
     @JsonProperty("Observaciones")
     public String Observaciones;
 
+    @JsonProperty("DatosServicio")
+    public String DatosServicio;
+
+    @JsonProperty("ConsumeServicio")
+    public String ConsumeServicio;
+
+    @JsonProperty("UrlServicio")
+    public String UrlServicio;
+
 }
