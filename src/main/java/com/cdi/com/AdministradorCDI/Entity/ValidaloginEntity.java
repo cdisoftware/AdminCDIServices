@@ -15,6 +15,7 @@ import lombok.Data;
             procedureName = "PaValidalogin",
             resultClasses = ValidaloginEntity.class)
 })
+
 public class ValidaloginEntity {
 
     @Id
@@ -35,12 +36,18 @@ public class ValidaloginEntity {
 
     @JsonProperty("Cedula")
     public String Cedula;
-    
+
     @JsonProperty("UserAdmin")
     public Integer UserAdmin;
-    
+
     @JsonProperty("UrlFoto")
     public String UrlFoto;
+
+    @JsonProperty("Estado")
+    public Integer Estado;
+
+    @JsonProperty("FechaMod")
+    public String FechaMod;
 
     @JsonProperty("RESPUESTA")
     public String RESPUESTA;
