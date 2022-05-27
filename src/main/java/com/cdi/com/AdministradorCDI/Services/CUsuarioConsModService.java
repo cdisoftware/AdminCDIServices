@@ -1,7 +1,8 @@
 package com.cdi.com.AdministradorCDI.Services;
 
+import com.cdi.com.AdministradorCDI.Entity.CUsuarioConsModEntity;
+
 public interface CUsuarioConsModService {
 
-    public String ConsultaUsuarioConsMod(Integer Bandera, Integer Idusuario, Integer TipoId, String NroId, String Usuario,
-            String Nombre, String Apellido, Integer Estado, Integer Id_U, String Clave, Integer UserName);
+    public String ConsultaUsuarioConsMod(CUsuarioConsModEntity entidad, Integer Bandera, Integer Idusuario);
 }

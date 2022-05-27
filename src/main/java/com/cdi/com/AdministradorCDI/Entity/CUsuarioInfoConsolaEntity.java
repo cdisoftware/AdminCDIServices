@@ -21,6 +21,9 @@ public class CUsuarioInfoConsolaEntity {
     @JsonProperty("ID")
     public Integer ID;
 
+    @JsonProperty("Password")
+    public String Password;
+
     @JsonProperty("Cedula")
     public String Cedula;
 
@@ -41,4 +44,5 @@ public class CUsuarioInfoConsolaEntity {
 
     @JsonProperty("UrlFoto")
     public String UrlFoto;
+
 }

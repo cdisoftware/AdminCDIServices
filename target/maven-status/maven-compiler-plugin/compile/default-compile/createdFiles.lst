@@ -17,6 +17,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaRegistroBackupServiceImpl
 com\cdi\com\AdministradorCDI\Services\InsertaClientesService.class
 com\cdi\com\AdministradorCDI\Services\EliminaProyectoService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\UpdateInfoUsuarioServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Entity\CUsuarioConsultaRolesEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaHardwareEntity.class
 com\cdi\com\AdministradorCDI\Entity\CPermisosRolModEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaServicioEntity.class
@@ -43,6 +44,7 @@ com\cdi\com\AdministradorCDI\Services\EliminaTipoBackupService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaGrilaProyecBckEntity.class
 com\cdi\com\AdministradorCDI\Entity\ValidaloginEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\UpdateServicioRealizadoServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Services\CUsuarioConsultaService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaDesarollosPendientesEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaTipoServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaServidorServiceImplementacion.class
@@ -50,6 +52,7 @@ com\cdi\com\AdministradorCDI\Entity\EliminaBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\CPermisosRolEntity.class
 com\cdi\com\AdministradorCDI\Services\EliminaServidorService.class
 com\cdi\com\AdministradorCDI\Services\InsertaServicioService.class
+com\cdi\com\AdministradorCDI\Entity\ConsultaRolModuloEntity.class
 com\cdi\com\AdministradorCDI\Services\EliminaRegistroBackupService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\FileStorageException.class
 com\cdi\com\AdministradorCDI\Services\ConsultaHardwareService.class
@@ -94,6 +97,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\ValidaloginServiceImplementacion.
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaServicioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\MyFileNotFoundException.class
 com\cdi\com\AdministradorCDI\Services\ConsultaDetallesServidorService.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaRolModuloServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CRolModServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaDesarollosPendientesService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaServidorEntity.class
@@ -111,6 +115,7 @@ com\cdi\com\AdministradorCDI\Services\InsertaProyectoService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaRegistroBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\UpdateServicioRealizadoEntity.class
 com\cdi\com\AdministradorCDI\Entity\CValidaUsuarioConsolaEntity.class
+com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioConsultaServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\EliminaClienteEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaUsuarioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ModImgEntity.class
@@ -128,6 +133,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaServiciosServiceImplement
 com\cdi\com\AdministradorCDI\Entity\EliminaTipoServidorEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaHardwareServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaUsuarioServiceImplementacion.class
+com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioConsultaRolesServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioInfoConsolaServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\EliminaTipoBackupEntity.class
@@ -139,10 +145,12 @@ com\cdi\com\AdministradorCDI\Services\InsertaRegistroBackupService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaServidoresServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\EliminaBackupService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaServidoresService.class
+com\cdi\com\AdministradorCDI\Entity\CUsuarioConsultaEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaProyectosServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CPermisosRolServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaTipoServidorEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioRolModificaServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Services\CUsuarioConsultaRolesService.class
 com\cdi\com\AdministradorCDI\Services\EliminaHardwareService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaGrilaProyecBckService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaUsuarioEntity.class
@@ -154,3 +162,4 @@ com\cdi\com\AdministradorCDI\Services\ConsultaRegistroBackupService.class
 com\cdi\com\AdministradorCDI\Services\EliminaServicioService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaTipoServidorService.class
+com\cdi\com\AdministradorCDI\Services\ConsultaRolModuloService.class

@@ -1,5 +1,6 @@
 package com.cdi.com.AdministradorCDI.ServiceImplements;
 
+import com.cdi.com.AdministradorCDI.Comun.clsEncriptacion;
 import com.cdi.com.AdministradorCDI.Entity.InsertaUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Services.InsertaUsuarioService;
 import javax.persistence.EntityManager;
@@ -11,10 +12,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioService {
-
+    
     @PersistenceContext
     private EntityManager repositorio;
-
+    
     @Override
     public String InsertaUsuario(InsertaUsuarioEntity entidad, Integer Bandera) {
         try {
@@ -35,15 +36,15 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
             insertusuario.setParameter("Password", entidad.getPassword());
             insertusuario.setParameter("Cedula", entidad.getCedula());
             insertusuario.setParameter("UserAdmin", entidad.getUserAdmin());
-
+            
             insertusuario.execute();
             return JSONObject.quote((String) insertusuario.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
-
+        
     }
-
+    
     @Override
     public String ActualizaUsuario(InsertaUsuarioEntity entidad, Integer Bandera) {
         try {
@@ -69,6 +70,6 @@ public class InsertaUsuarioServiceImplementacion implements InsertaUsuarioServic
         } catch (Exception ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
-
+        
     }
 }

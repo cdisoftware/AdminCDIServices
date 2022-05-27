@@ -24,6 +24,24 @@ import lombok.Data;
 public class CUsuarioConsModEntity {
 
     @Id
-    @JsonProperty("Respuesta")
-    private String Respuesta;
+    @JsonProperty("Id_U")
+    private Integer Id_U;
+
+    @JsonProperty("Cedula")
+    private String Cedula;
+
+    @JsonProperty("Usuario")
+    private String Usuario;
+
+    @JsonProperty("Nombre")
+    private String Nombre;
+
+    @JsonProperty("Apellido")
+    private String Apellido;
+
+    @JsonProperty("Estado")
+    private Integer Estado;
+
+    @JsonProperty("Password")
+    private String Password;
 }

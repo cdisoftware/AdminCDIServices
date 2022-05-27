@@ -2,6 +2,7 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaUsuarioService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\UpdateServicioRealizadoService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\InsertaBackupServiceImplementacion.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioConsultaRolesServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\UpdateServicioRealizadoServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ConsultaTipoServidorEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaBackupServiceImplementacion.java
@@ -40,6 +41,8 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaTipoBackupService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaGrilaProyecBckService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\InsertaTipoBackupService.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\CUsuarioConsultaRolesEntity.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaRolModuloServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\CValidaUsuarioConsolaService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\InsertaClientesEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\InsertaBackupEntity.java
@@ -77,11 +80,13 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\InsertaTipoServidorServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioRolModificaServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\EliminaServidorServiceImplementacion.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\CUsuarioConsultaService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\InsertaProyectoServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\CUsuarioRolModificaService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioConsModServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\EliminaProyectoEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\ValidaloginServiceImplementacion.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ConsultaRolModuloEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaHardwareService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaTipoServidorService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\EliminaServidorEntity.java
@@ -95,6 +100,7 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaClienteService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\EliminaUsuarioService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ConsultaBackupEntity.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\ConsultaRolModuloService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\CListaEstadoService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ConsultaTipoBackupEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\CListaRolServiceImplementacion.java
@@ -132,6 +138,7 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\CListaEstadoServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\InsertaUsuarioService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\ModImgServiceImplementacion.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioConsultaServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\EliminaUsuarioServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\ConsultaProyectosEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\CPermisosRolModEntity.java
@@ -139,11 +146,13 @@ C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\InsertaUsuarioEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\CPermisosRolEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\FileStorageService.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\CUsuarioConsultaRolesService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\EliminaHardwareServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaTipoBackupServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\ServiceImplements\InsertaHardwareServServiceImplementacion.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Comun\FileStorageProperties.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\InsertaTipoServidorService.java
+C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\CUsuarioConsultaEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\InsertaServicioEntity.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Services\InsertaRegistroBackupService.java
 C:\Users\juan7\Documents\NetBeansProjects\AdminCDIServices\src\main\java\com\cdi\com\AdministradorCDI\Entity\EliminaClienteEntity.java

@@ -1,5 +1,6 @@
 package com.cdi.com.AdministradorCDI.ServiceImplements;
 
+import com.cdi.com.AdministradorCDI.Comun.clsEncriptacion;
 import com.cdi.com.AdministradorCDI.Entity.ValidaloginEntity;
 import com.cdi.com.AdministradorCDI.Services.ValidaloginService;
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class ValidaloginServiceImplementacion implements ValidaloginService {
             consbackup.registerStoredProcedureParameter("Respuesta", String.class, ParameterMode.IN);
 
             consbackup.setParameter("Usuario", entidad.getUsuario());
-            consbackup.setParameter("Password", entidad.getPassword());
+            consbackup.setParameter("Password", clsEncriptacion.Encriptar(entidad.getPassword()));
             consbackup.setParameter("Respuesta", entidad.getRESPUESTA());
 
             return consbackup.getResultList();
