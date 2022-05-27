@@ -1,5 +1,6 @@
 package com.cdi.com.AdministradorCDI.ServiceImplements;
 
+import com.cdi.com.AdministradorCDI.Comun.clsEncriptacion;
 import com.cdi.com.AdministradorCDI.Entity.CUsuarioInfoConsolaEntity;
 import com.cdi.com.AdministradorCDI.Services.CUsuarioInfoConsolaService;
 import java.util.ArrayList;
@@ -18,13 +19,15 @@ public class CUsuarioInfoConsolaServiceImplementacion implements CUsuarioInfoCon
     private EntityManager repositorio;
 
     @Override
-    public List<CUsuarioInfoConsolaEntity> ConsultaUsuarioInfoConsola(String Usuario, String Acceso) {
+    public List<CUsuarioInfoConsolaEntity> ConsultaUsuarioInfoConsola(CUsuarioInfoConsolaEntity entidad, Integer bandera) {
         try {
             StoredProcedureQuery usuarioinfo = repositorio.createNamedStoredProcedureQuery("paCUsuarioInfoConsola");
+            usuarioinfo.registerStoredProcedureParameter("bandera", Integer.class, ParameterMode.IN);
             usuarioinfo.registerStoredProcedureParameter("Usuario", String.class, ParameterMode.IN);
             usuarioinfo.registerStoredProcedureParameter("Acceso", String.class, ParameterMode.IN);
-            usuarioinfo.setParameter("Usuario", Usuario);
-            usuarioinfo.setParameter("Acceso", Acceso);
+            usuarioinfo.setParameter("bandera", bandera);
+            usuarioinfo.setParameter("Usuario", entidad.getUsuario());
+            usuarioinfo.setParameter("Acceso", entidad.getPassword());
             return usuarioinfo.getResultList();
         } catch (Exception ex) {
             List list = new ArrayList();

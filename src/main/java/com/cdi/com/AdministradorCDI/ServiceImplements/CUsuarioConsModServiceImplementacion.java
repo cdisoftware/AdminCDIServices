@@ -1,5 +1,7 @@
 package com.cdi.com.AdministradorCDI.ServiceImplements;
 
+import com.cdi.com.AdministradorCDI.Comun.clsEncriptacion;
+import com.cdi.com.AdministradorCDI.Entity.CUsuarioConsModEntity;
 import com.cdi.com.AdministradorCDI.Services.CUsuarioConsModService;
 import javax.persistence.EntityManager;
 import javax.persistence.ParameterMode;
@@ -15,13 +17,11 @@ public class CUsuarioConsModServiceImplementacion implements CUsuarioConsModServ
     private EntityManager repositorio;
 
     @Override
-    public String ConsultaUsuarioConsMod(Integer Bandera, Integer Idusuario, Integer TipoId, String NroId, String Usuario,
-            String Nombre, String Apellido, Integer Estado, Integer Id_U, String Clave, Integer UserName) {
+    public String ConsultaUsuarioConsMod(CUsuarioConsModEntity entidad, Integer Bandera, Integer Idusuario) {
         try {
             StoredProcedureQuery consusercons = repositorio.createNamedStoredProcedureQuery("paCUsuarioConsMod");
             consusercons.registerStoredProcedureParameter("Bandera", Integer.class, ParameterMode.IN);
             consusercons.registerStoredProcedureParameter("Idusuario", Integer.class, ParameterMode.IN);
-            consusercons.registerStoredProcedureParameter("TipoId", Integer.class, ParameterMode.IN);
             consusercons.registerStoredProcedureParameter("NroId", String.class, ParameterMode.IN);
             consusercons.registerStoredProcedureParameter("Usuario", String.class, ParameterMode.IN);
             consusercons.registerStoredProcedureParameter("Nombre", String.class, ParameterMode.IN);
@@ -29,18 +29,15 @@ public class CUsuarioConsModServiceImplementacion implements CUsuarioConsModServ
             consusercons.registerStoredProcedureParameter("Estado", Integer.class, ParameterMode.IN);
             consusercons.registerStoredProcedureParameter("Id_U", Integer.class, ParameterMode.IN);
             consusercons.registerStoredProcedureParameter("Clave", String.class, ParameterMode.IN);
-            consusercons.registerStoredProcedureParameter("UserName", Integer.class, ParameterMode.IN);
             consusercons.setParameter("Bandera", Bandera);
             consusercons.setParameter("Idusuario", Idusuario);
-            consusercons.setParameter("TipoId", TipoId);
-            consusercons.setParameter("NroId", NroId);
-            consusercons.setParameter("Usuario", Usuario);
-            consusercons.setParameter("Nombre", Nombre);
-            consusercons.setParameter("Apellido", Apellido);
-            consusercons.setParameter("Estado", Estado);
-            consusercons.setParameter("Id_U", Id_U);
-            consusercons.setParameter("Clave", Clave);
-            consusercons.setParameter("UserName", UserName);
+            consusercons.setParameter("NroId", entidad.getCedula());
+            consusercons.setParameter("Usuario", entidad.getUsuario());
+            consusercons.setParameter("Nombre", entidad.getNombre());
+            consusercons.setParameter("Apellido", entidad.getApellido());
+            consusercons.setParameter("Estado", entidad.getEstado());
+            consusercons.setParameter("Id_U", entidad.getId_U());
+            consusercons.setParameter("Clave", clsEncriptacion.Encriptar(entidad.getPassword()));
             consusercons.execute();
             return JSONObject.quote((String) consusercons.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {

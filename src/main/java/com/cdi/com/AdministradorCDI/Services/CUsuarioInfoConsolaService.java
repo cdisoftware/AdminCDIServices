@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface CUsuarioInfoConsolaService {
 
-    public List<CUsuarioInfoConsolaEntity> ConsultaUsuarioInfoConsola(String Usuario, String Acceso);
+    public List<CUsuarioInfoConsolaEntity> ConsultaUsuarioInfoConsola(CUsuarioInfoConsolaEntity entidad, Integer bandera);
 }
