@@ -10,7 +10,6 @@ com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioConsModServiceImplementac
 com\cdi\com\AdministradorCDI\Entity\ConsultaClienteEntity.class
 com\cdi\com\AdministradorCDI\Services\CRolModService.class
 com\cdi\com\AdministradorCDI\Services\CPermisosRolModService.class
-com\cdi\com\AdministradorCDI\Services\EliminaUsuarioService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaClientesServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaProyectoServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaRegistroBackupServiceImplementacion.class
@@ -42,7 +41,6 @@ com\cdi\com\AdministradorCDI\Services\CListaEstadoService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaTipoBackupEntity.class
 com\cdi\com\AdministradorCDI\Services\EliminaTipoBackupService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaGrilaProyecBckEntity.class
-com\cdi\com\AdministradorCDI\Entity\ValidaloginEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\UpdateServicioRealizadoServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\CUsuarioConsultaService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaDesarollosPendientesEntity.class
@@ -60,12 +58,10 @@ com\cdi\com\AdministradorCDI\Entity\CListaEstadoEntity.class
 com\cdi\com\AdministradorCDI\Entity\CListaRolEntity.class
 com\cdi\com\AdministradorCDI\Entity\CUsuarioConsModEntity.class
 com\cdi\com\AdministradorCDI\Entity\InsertaHardwareServEntity.class
-com\cdi\com\AdministradorCDI\Entity\EliminaUsuarioEntity.class
 com\cdi\com\AdministradorCDI\Services\ConsultaTipoBackupService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaDetallesServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaTipoServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaTipoBackupService.class
-com\cdi\com\AdministradorCDI\Services\ConsultaUsuarioService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\UploadFileResponse.class
 com\cdi\com\AdministradorCDI\Entity\CRolModEntity.class
@@ -87,13 +83,11 @@ com\cdi\com\AdministradorCDI\Services\ConsultaBackupService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaServicioEntity.class
 com\cdi\com\AdministradorCDI\Services\UpdateDetalleServidorService.class
 com\cdi\com\AdministradorCDI\Services\CUsuarioConsModService.class
-com\cdi\com\AdministradorCDI\Entity\ConsultaUsuarioEntity.class
 com\cdi\com\AdministradorCDI\Services\InsertaHardwareServService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaTipoServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaRegistroBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\FileStorageService.class
 com\cdi\com\AdministradorCDI\Entity\UpdateDetalleServidorEntity.class
-com\cdi\com\AdministradorCDI\ServiceImplements\ValidaloginServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaServicioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\MyFileNotFoundException.class
 com\cdi\com\AdministradorCDI\Services\ConsultaDetallesServidorService.class
@@ -108,7 +102,6 @@ com\cdi\com\AdministradorCDI\Entity\CUsuarioRolModificaEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaDetallesServidorEntity.class
 com\cdi\com\AdministradorCDI\Entity\CUsuarioInfoConsolaEntity.class
 com\cdi\com\AdministradorCDI\Services\CListaRolService.class
-com\cdi\com\AdministradorCDI\Services\InsertaUsuarioService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaTipoServidorService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaServicioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaProyectoService.class
@@ -117,13 +110,10 @@ com\cdi\com\AdministradorCDI\Entity\UpdateServicioRealizadoEntity.class
 com\cdi\com\AdministradorCDI\Entity\CValidaUsuarioConsolaEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioConsultaServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\EliminaClienteEntity.class
-com\cdi\com\AdministradorCDI\ServiceImplements\EliminaUsuarioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ModImgEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaHardwareServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaProyectosService.class
 com\cdi\com\AdministradorCDI\Services\InsertaBackupService.class
-com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaUsuarioServiceImplementacion.class
-com\cdi\com\AdministradorCDI\Services\ValidaloginService.class
 com\cdi\com\AdministradorCDI\AdministradorCDIApplication.class
 com\cdi\com\AdministradorCDI\Services\InsertaServidorService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaTipoBackupServiceImplementacion.class
@@ -132,7 +122,6 @@ com\cdi\com\AdministradorCDI\ServiceImplements\EliminaTipoBackupServiceImplement
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaServiciosServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\EliminaTipoServidorEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaHardwareServiceImplementacion.class
-com\cdi\com\AdministradorCDI\ServiceImplements\InsertaUsuarioServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioConsultaRolesServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioInfoConsolaServiceImplementacion.class
@@ -153,7 +142,6 @@ com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioRolModificaServiceImpleme
 com\cdi\com\AdministradorCDI\Services\CUsuarioConsultaRolesService.class
 com\cdi\com\AdministradorCDI\Services\EliminaHardwareService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaGrilaProyecBckService.class
-com\cdi\com\AdministradorCDI\Entity\InsertaUsuarioEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CListaRolServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Comun\FileStorageProperties.class
