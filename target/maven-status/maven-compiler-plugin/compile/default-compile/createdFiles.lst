@@ -2,6 +2,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\UpdateDetalleServidorServiceImple
 com\cdi\com\AdministradorCDI\Services\UpdateInfoUsuarioService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaServiciosEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaDesarollosPendientesServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Entity\ConsultaListaTareaEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaRegistroBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaBackupEntity.class
 META-INF\spring-configuration-metadata.json
@@ -28,6 +29,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaClienteServiceImplementac
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaProyectoServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\InsertaTipoServidorEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaClienteServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Services\CRegistroTareaService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaInfoUserService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaHardwareServServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaInfoUserServiceImplementacion.class
@@ -48,6 +50,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\InsertaTipoServidorServiceImpleme
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\EliminaBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\CPermisosRolEntity.class
+com\cdi\com\AdministradorCDI\Entity\CRegistroTareasEntity.class
 com\cdi\com\AdministradorCDI\Services\EliminaServidorService.class
 com\cdi\com\AdministradorCDI\Services\InsertaServicioService.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaRolModuloEntity.class
@@ -61,6 +64,7 @@ com\cdi\com\AdministradorCDI\Entity\InsertaHardwareServEntity.class
 com\cdi\com\AdministradorCDI\Services\ConsultaTipoBackupService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaDetallesServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaTipoServidorServiceImplementacion.class
+com\cdi\com\AdministradorCDI\Services\CRegistroTareasModService.class
 com\cdi\com\AdministradorCDI\Services\InsertaTipoBackupService.class
 com\cdi\com\AdministradorCDI\Entity\InsertaBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\UploadFileResponse.class
@@ -74,6 +78,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaBackupServiceImplementaci
 com\cdi\com\AdministradorCDI\Services\UpdateServicioRealizadoService.class
 com\cdi\com\AdministradorCDI\Entity\CListaFiltrosEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CPermisosRolModServiceImplementacion.class
+com\cdi\com\AdministradorCDI\ServiceImplements\CRegistroTareasModServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\UpdateInfoUsuarioEntity.class
 com\cdi\com\AdministradorCDI\Services\CListaFiltrosService.class
 com\cdi\com\AdministradorCDI\Services\CPermisosRolService.class
@@ -135,7 +140,9 @@ com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaServidoresServiceImplemen
 com\cdi\com\AdministradorCDI\Services\EliminaBackupService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaServidoresService.class
 com\cdi\com\AdministradorCDI\Entity\CUsuarioConsultaEntity.class
+com\cdi\com\AdministradorCDI\Services\ConsultaListaTareaService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaProyectosServiceImplementacion.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaListaTareaServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CPermisosRolServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaTipoServidorEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioRolModificaServiceImplementacion.class
@@ -148,6 +155,8 @@ com\cdi\com\AdministradorCDI\Comun\FileStorageProperties.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ModImgServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaRegistroBackupService.class
 com\cdi\com\AdministradorCDI\Services\EliminaServicioService.class
+com\cdi\com\AdministradorCDI\Entity\CRegistroTareasModEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaServidorServiceImplementacion.class
+com\cdi\com\AdministradorCDI\ServiceImplements\CRegistroTareaServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaTipoServidorService.class
 com\cdi\com\AdministradorCDI\Services\ConsultaRolModuloService.class
