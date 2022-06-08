@@ -64,6 +64,31 @@ public class CRegistroTareasModServiceImplementacion implements CRegistroTareasM
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
     }
+
+    @Override
+    public String EliminaRegTareasMod(CRegistroTareasModEntity entidad, Integer Bandera) {
+        try {
+            StoredProcedureQuery elimtarea = repositorio.createNamedStoredProcedureQuery("paCRegistroTareasMod");
+            elimtarea.registerStoredProcedureParameter("Bandera", Integer.class, ParameterMode.IN);
+            elimtarea.registerStoredProcedureParameter("IdActividad", Integer.class, ParameterMode.IN);
+            elimtarea.registerStoredProcedureParameter("Id_U", Integer.class, ParameterMode.IN);
+            elimtarea.registerStoredProcedureParameter("Id_Pry", Integer.class, ParameterMode.IN);
+            elimtarea.registerStoredProcedureParameter("IdTipoTarea", Integer.class, ParameterMode.IN);
+            elimtarea.registerStoredProcedureParameter("Descripcion", String.class, ParameterMode.IN);
+            elimtarea.registerStoredProcedureParameter("Tiempo", Integer.class, ParameterMode.IN);
+            elimtarea.setParameter("Bandera", Bandera);
+            elimtarea.setParameter("IdActividad", entidad.getIdActividad());
+            elimtarea.setParameter("Id_U", entidad.getId_U());
+            elimtarea.setParameter("Id_Pry", entidad.getId_Pry());
+            elimtarea.setParameter("IdTipoTarea", entidad.getIdTipoTarea());
+            elimtarea.setParameter("Descripcion", entidad.getDescripcion());
+            elimtarea.setParameter("Tiempo", entidad.getTiempo());
+            elimtarea.execute();
+            return JSONObject.quote((String) elimtarea.getOutputParameterValue("Respuesta"));
+        } catch (Exception ex) {
+            return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
+        }
+    }
 }
 
 

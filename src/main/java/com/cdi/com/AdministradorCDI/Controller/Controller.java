@@ -745,4 +745,11 @@ public class Controller {
             @PathVariable Integer Bandera) {
         return serviceCRegistroTareasModService.ActualizarRegTareasMod(entidad, Bandera);
     }
+
+    @PostMapping("/eliminaregtareamod/{Bandera}")
+    public String EliminaRegTareasMod(
+            @RequestBody CRegistroTareasModEntity entidad,
+            @PathVariable Integer Bandera) {
+        return serviceCRegistroTareasModService.EliminaRegTareasMod(entidad, Bandera);
+    }
 }

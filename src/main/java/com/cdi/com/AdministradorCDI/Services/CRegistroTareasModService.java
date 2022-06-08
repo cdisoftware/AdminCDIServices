@@ -8,4 +8,6 @@ public interface CRegistroTareasModService {
 
     public String ActualizarRegTareasMod(CRegistroTareasModEntity entidad, Integer Bandera);
 
+    public String EliminaRegTareasMod(CRegistroTareasModEntity entidad, Integer Bandera);
+
 }

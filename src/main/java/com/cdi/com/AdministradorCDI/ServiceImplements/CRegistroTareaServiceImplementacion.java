@@ -28,6 +28,9 @@ public class CRegistroTareaServiceImplementacion implements CRegistroTareaServic
             consregtareas.registerStoredProcedureParameter("IdTipoTarea", Integer.class, ParameterMode.IN);
             consregtareas.registerStoredProcedureParameter("Descripcion", String.class, ParameterMode.IN);
             consregtareas.registerStoredProcedureParameter("Tiempo", Integer.class, ParameterMode.IN);
+            consregtareas.registerStoredProcedureParameter("Fecharegistro", String.class, ParameterMode.IN);
+            consregtareas.registerStoredProcedureParameter("NombreUsuario", String.class, ParameterMode.IN);
+
             consregtareas.setParameter("Bandera", Bandera);
             consregtareas.setParameter("IdActividad", entidad.getIdActividad());
             consregtareas.setParameter("Id_U", entidad.getId_U());
@@ -35,6 +38,9 @@ public class CRegistroTareaServiceImplementacion implements CRegistroTareaServic
             consregtareas.setParameter("IdTipoTarea", entidad.getIdTipoTarea());
             consregtareas.setParameter("Descripcion", entidad.getDescripcionTarea());
             consregtareas.setParameter("Tiempo", entidad.getTiempo());
+            consregtareas.setParameter("Fecharegistro", entidad.getFechaRegistro());
+            consregtareas.setParameter("NombreUsuario", entidad.getUsuario());
+
             return consregtareas.getResultList();
         } catch (Exception ex) {
             List list = new ArrayList();
