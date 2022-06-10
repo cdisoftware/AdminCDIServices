@@ -4,5 +4,7 @@ import com.cdi.com.AdministradorCDI.Entity.CUsuarioConsModEntity;
 
 public interface CUsuarioConsModService {
 
-    public String ConsultaUsuarioConsMod(CUsuarioConsModEntity entidad, Integer Bandera, Integer Idusuario);
+    public String InsertaUsuarioConsMod(CUsuarioConsModEntity entidad, Integer Bandera, Integer Idusuario);
+
+    public String ActualizaUsuarioConsMod(CUsuarioConsModEntity entidad, Integer Bandera, Integer Idusuario);
 }
