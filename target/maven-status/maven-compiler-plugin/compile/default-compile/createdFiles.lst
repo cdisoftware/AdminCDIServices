@@ -131,6 +131,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioConsultaRolesServiceImple
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioInfoConsolaServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\EliminaTipoBackupEntity.class
+com\cdi\com\AdministradorCDI\Entity\EncriptacionEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaTipoBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaProyectosEntity.class
 com\cdi\com\AdministradorCDI\Services\EliminaTipoServidorService.class

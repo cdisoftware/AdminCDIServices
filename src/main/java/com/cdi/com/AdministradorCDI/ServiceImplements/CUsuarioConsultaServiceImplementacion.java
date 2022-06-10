@@ -16,7 +16,7 @@ public class CUsuarioConsultaServiceImplementacion implements CUsuarioConsultaSe
 
     @PersistenceContext
     private EntityManager repositorio;
-
+       
     @Override
     public List<CUsuarioConsultaEntity> ConsultaCUsuario(Integer Bandera, Integer Idusuario, Integer Estado, Integer IdRol, Integer IdUsuarioCons, String NombreUsuario) {
         try {

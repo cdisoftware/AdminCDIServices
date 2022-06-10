@@ -2,8 +2,11 @@ package com.cdi.com.AdministradorCDI.ServiceImplements;
 
 import com.cdi.com.AdministradorCDI.Comun.clsEncriptacion;
 import com.cdi.com.AdministradorCDI.Entity.CUsuarioInfoConsolaEntity;
+import com.cdi.com.AdministradorCDI.Entity.EncriptacionEntity;
 import com.cdi.com.AdministradorCDI.Services.CUsuarioInfoConsolaService;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
@@ -72,6 +75,24 @@ public class CUsuarioInfoConsolaServiceImplementacion implements CUsuarioInfoCon
         } catch (BadPaddingException | IllegalBlockSizeException | NoSuchPaddingException ex) {
             return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
         }
+    }
+
+    @Override
+    public String Clave(EncriptacionEntity entidad) {
+        String Respuesta = null;
+
+        if (entidad.getBandera() == 1) {
+            try {
+                String encripta = clsEncriptacion.Encriptar(entidad.getClave());
+                Respuesta = encripta;
+            } catch (IllegalBlockSizeException | NoSuchPaddingException | BadPaddingException ex) {
+                Logger.getLogger(CUsuarioInfoConsolaServiceImplementacion.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            String desencripta = clsEncriptacion.Desencriptar(entidad.getClave());
+            Respuesta = desencripta;
+        }
+        return JSONObject.quote(Respuesta);
     }
 
 }
