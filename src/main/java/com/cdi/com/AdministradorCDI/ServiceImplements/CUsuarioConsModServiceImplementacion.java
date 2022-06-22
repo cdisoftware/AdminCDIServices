@@ -32,6 +32,10 @@ public class CUsuarioConsModServiceImplementacion implements CUsuarioConsModServ
             insertUser.registerStoredProcedureParameter("Estado", Integer.class, ParameterMode.IN);
             insertUser.registerStoredProcedureParameter("Id_U", Integer.class, ParameterMode.IN);
             insertUser.registerStoredProcedureParameter("Clave", String.class, ParameterMode.IN);
+            insertUser.registerStoredProcedureParameter("Direccion", String.class, ParameterMode.IN);
+            insertUser.registerStoredProcedureParameter("Telefono", String.class, ParameterMode.IN);
+            insertUser.registerStoredProcedureParameter("Email", String.class, ParameterMode.IN);
+
             insertUser.setParameter("Bandera", Bandera);
             insertUser.setParameter("Idusuario", Idusuario);
             insertUser.setParameter("NroId", entidad.getCedula());
@@ -46,6 +50,10 @@ public class CUsuarioConsModServiceImplementacion implements CUsuarioConsModServ
 
                 return JSONObject.quote("No fue posible ejecutar los datos, verifique el Log para validar la inconsistencia");
             }
+            insertUser.setParameter("Direccion", entidad.getDireccion());
+            insertUser.setParameter("Telefono", entidad.getTelefono());
+            insertUser.setParameter("Email", entidad.getEmail());
+
             insertUser.execute();
             return JSONObject.quote((String) insertUser.getOutputParameterValue("Respuesta"));
 
@@ -67,6 +75,9 @@ public class CUsuarioConsModServiceImplementacion implements CUsuarioConsModServ
             actUser.registerStoredProcedureParameter("Estado", Integer.class, ParameterMode.IN);
             actUser.registerStoredProcedureParameter("Id_U", Integer.class, ParameterMode.IN);
             actUser.registerStoredProcedureParameter("Clave", String.class, ParameterMode.IN);
+            actUser.registerStoredProcedureParameter("Direccion", String.class, ParameterMode.IN);
+            actUser.registerStoredProcedureParameter("Telefono", String.class, ParameterMode.IN);
+            actUser.registerStoredProcedureParameter("Email", String.class, ParameterMode.IN);
             actUser.setParameter("Bandera", Bandera);
             actUser.setParameter("Idusuario", Idusuario);
             actUser.setParameter("NroId", entidad.getCedula());
@@ -76,6 +87,9 @@ public class CUsuarioConsModServiceImplementacion implements CUsuarioConsModServ
             actUser.setParameter("Estado", entidad.getEstado());
             actUser.setParameter("Id_U", entidad.getId_U());
             actUser.setParameter("Clave", entidad.getPassword());
+            actUser.setParameter("Direccion", entidad.getDireccion());
+            actUser.setParameter("Telefono", entidad.getTelefono());
+            actUser.setParameter("Email", entidad.getEmail());
             actUser.execute();
             return JSONObject.quote((String) actUser.getOutputParameterValue("Respuesta"));
 
