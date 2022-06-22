@@ -625,7 +625,7 @@ public class Controller {
         return serviceCValidaUsuarioConsolaService.ConsultaValUsuarioConsola(Usuario);
     }
     
-    @PostMapping("/consusuarioinfoconsola/{bandera}")
+    @GetMapping("/consusuarioinfoconsola/{bandera}")
     public String ConsultaUsuarioInfoConsola(
             @RequestBody CUsuarioInfoConsolaEntity entidad,
             @PathVariable Integer bandera) {

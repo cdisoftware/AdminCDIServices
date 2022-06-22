@@ -25,23 +25,32 @@ public class CUsuarioConsModEntity {
 
     @Id
     @JsonProperty("Id_U")
-    private Integer Id_U;
+    public Integer Id_U;
 
     @JsonProperty("Cedula")
-    private String Cedula;
+    public String Cedula;
 
     @JsonProperty("Usuario")
-    private String Usuario;
+    public String Usuario;
 
     @JsonProperty("Nombre")
-    private String Nombre;
+    public String Nombre;
 
     @JsonProperty("Apellido")
-    private String Apellido;
+    public String Apellido;
 
     @JsonProperty("Estado")
-    private Integer Estado;
+    public Integer Estado;
 
     @JsonProperty("Password")
-    private String Password;
+    public String Password;
+
+    @JsonProperty("Direccion")
+    public String Direccion;
+
+    @JsonProperty("Telefono")
+    public String Telefono;
+
+    @JsonProperty("Email")
+    public String Email;
 }

@@ -51,4 +51,12 @@ public class CUsuarioConsultaEntity {
     @JsonProperty("Clave")
     public String Clave;
 
+    @JsonProperty("Direccion")
+    public String Direccion;
+
+    @JsonProperty("Telefono")
+    public String Telefono;
+
+    @JsonProperty("Email")
+    public String Email;
 }
