@@ -36,7 +36,7 @@ public class UpdateInfoUsuarioEntity {
     @JsonProperty("Password")
     public String Password;
 
-    @JsonProperty("Dierrecion")
+    @JsonProperty("Direccion")
     public String Direccion;
 
     @JsonProperty("Telefono")
