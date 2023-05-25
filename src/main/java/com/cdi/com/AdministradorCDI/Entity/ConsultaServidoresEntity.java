@@ -21,6 +21,24 @@ public class ConsultaServidoresEntity {
     @JsonProperty("Id_S")
     public Integer Id_S;
 
+    @JsonProperty("IpPublica")
+    public String IpPublica;
+
+    @JsonProperty("TieneIpPublica")
+    public String TieneIpPublica;
+
+    @JsonProperty("AplicacionesIIS")
+    public String AplicacionesIIS;
+
+    @JsonProperty("TieneIIS")
+    public String TieneIIS;
+
+    @JsonProperty("BaseDeDatos")
+    public String BaseDeDatos;
+
+    @JsonProperty("TieneBD")
+    public String TieneBD;
+
     @JsonProperty("Ip_S")
     public String Ip_S;
 
@@ -53,7 +71,7 @@ public class ConsultaServidoresEntity {
 
     @JsonProperty("Servidor_Aloja")
     public Integer Servidor_Aloja;
-    
+
     @JsonProperty("NombreServidorAloja")
     public String NombreServidorAloja;
 
@@ -62,4 +80,13 @@ public class ConsultaServidoresEntity {
 
     @JsonProperty("Fecha_Ult_Mod")
     public String Fecha_Ult_Mod;
+
+    @JsonProperty("Procesador")
+    public String Procesador;
+
+    @JsonProperty("DiscoDuro")
+    public String DiscoDuro;
+
+    @JsonProperty("RAM")
+    public String RAM;
 }

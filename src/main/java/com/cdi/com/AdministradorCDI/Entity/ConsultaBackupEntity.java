@@ -48,8 +48,8 @@ public class ConsultaBackupEntity {
     @JsonProperty("Id_Tipo_BCK")
     public Integer Id_Tipo_BCK;
 
-    @JsonProperty("Descripcion")
-    public String Descripcion;
+    @JsonProperty("DescripcionTipoB")
+    public String DescripcionTipoB;
 
     @JsonProperty("Id_Usuario")
     public Integer Id_Usuario;
@@ -60,4 +60,18 @@ public class ConsultaBackupEntity {
     @JsonProperty("Fecha_Ult_Mod")
     public String Fecha_Ult_Mod;
 
+    @JsonProperty("Ruta")
+    public String Ruta;
+
+    @JsonProperty("Descripcion")
+    public String Descripcion;
+
+    @JsonProperty("Estado")
+    public Integer Estado;
+
+    @JsonProperty("FechaUltimoReg")
+    public String FechaUltimoReg;
+
+    @JsonProperty("ProximoBack")
+    public String ProximoBack;
 }

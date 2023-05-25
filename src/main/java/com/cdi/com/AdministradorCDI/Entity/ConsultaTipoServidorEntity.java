@@ -23,4 +23,7 @@ public class ConsultaTipoServidorEntity {
 
     @JsonProperty("Descripcion")
     public String Descripcion;
+
+    @JsonProperty("TipoServ")
+    public String TipoServ;
 }

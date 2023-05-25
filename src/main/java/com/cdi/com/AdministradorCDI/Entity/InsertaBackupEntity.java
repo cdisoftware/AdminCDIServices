@@ -24,15 +24,15 @@ import lombok.Data;
 
 public class InsertaBackupEntity {
 
-    @Id
-    @JsonProperty("Id_B")
-    public Integer Id_B;
+     @Id
+    @JsonProperty("IdBackup")
+    public Integer IdBackup;
 
     @JsonProperty("Nombre")
     public String Nombre;
 
-    @JsonProperty("Id_PRY")
-    public Integer Id_PRY;
+    @JsonProperty("IdProyecto")
+    public Integer IdProyecto;
 
     @JsonProperty("Ambiente")
     public String Ambiente;
@@ -42,13 +42,22 @@ public class InsertaBackupEntity {
 
     @JsonProperty("Id_Servidor")
     public Integer Id_Servidor;
+   
+    @JsonProperty("IdTipoBackup")
+    public Integer IdTipoBackup;
+        
+    @JsonProperty("IdUsuario")
+    public Integer IdUsuario;
 
-    @JsonProperty("Id_Tipo_BCK")
-    public Integer Id_Tipo_BCK;
+    @JsonProperty("Fecha")
+    public String Fecha;
 
-    @JsonProperty("Id_Usuario")
-    public Integer Id_Usuario;
+    @JsonProperty("Ruta")
+    public String Ruta;
 
-    @JsonProperty("Fecha_Ult_Mod")
-    public String Fecha_Ult_Mod;
+    @JsonProperty("Descripcion")
+    public String Descripcion;
+
+    @JsonProperty("Estado")
+    public Integer Estado;
 }

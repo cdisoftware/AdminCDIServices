@@ -13,6 +13,7 @@ import com.cdi.com.AdministradorCDI.Entity.CUsuarioConsultaEntity;
 import com.cdi.com.AdministradorCDI.Entity.CUsuarioConsultaRolesEntity;
 import com.cdi.com.AdministradorCDI.Entity.CUsuarioInfoConsolaEntity;
 import com.cdi.com.AdministradorCDI.Entity.CUsuarioRolModificaEntity;
+import com.cdi.com.AdministradorCDI.Entity.ConsAdminPublicacionesEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaClienteEntity;
 import com.cdi.com.AdministradorCDI.Entity.ConsultaDesarollosPendientesEntity;
@@ -47,6 +48,7 @@ import com.cdi.com.AdministradorCDI.Entity.InsertaServicioEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaTipoBackupEntity;
 import com.cdi.com.AdministradorCDI.Entity.InsertaTipoServidorEntity;
+import com.cdi.com.AdministradorCDI.Entity.ModAdminpublicacionesEntity;
 import com.cdi.com.AdministradorCDI.Entity.ModImgEntity;
 import com.cdi.com.AdministradorCDI.Entity.UpdateDetalleServidorEntity;
 import com.cdi.com.AdministradorCDI.Entity.UpdateInfoUsuarioEntity;
@@ -68,6 +70,7 @@ import com.cdi.com.AdministradorCDI.Services.CUsuarioConsultaService;
 import com.cdi.com.AdministradorCDI.Services.CUsuarioInfoConsolaService;
 import com.cdi.com.AdministradorCDI.Services.CUsuarioRolModificaService;
 import com.cdi.com.AdministradorCDI.Services.CValidaUsuarioConsolaService;
+import com.cdi.com.AdministradorCDI.Services.ConsAdminPublicacionesService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaBackupService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaClienteService;
 import com.cdi.com.AdministradorCDI.Services.ConsultaDesarollosPendientesService;
@@ -101,6 +104,7 @@ import com.cdi.com.AdministradorCDI.Services.InsertaServicioService;
 import com.cdi.com.AdministradorCDI.Services.InsertaServidorService;
 import com.cdi.com.AdministradorCDI.Services.InsertaTipoBackupService;
 import com.cdi.com.AdministradorCDI.Services.InsertaTipoServidorService;
+import com.cdi.com.AdministradorCDI.Services.ModAdminpublicacioneService;
 import com.cdi.com.AdministradorCDI.Services.ModImgService;
 import com.cdi.com.AdministradorCDI.Services.UpdateDetalleServidorService;
 import com.cdi.com.AdministradorCDI.Services.UpdateInfoUsuarioService;
@@ -129,163 +133,169 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.PATCH, RequestMethod.DELETE})
 
 public class Controller {
-    
+
     @Autowired
     ConsultaBackupService serviceConsultaBackupService;
-    
+
     @Autowired
     ConsultaProyectosService serviceConsultaProyectosService;
-    
+
     @Autowired
     InsertaBackupService serviceInsertaBackupService;
-    
+
     @Autowired
     ConsultaServidoresService serviceConsultaServidoresService;
-    
+
     @Autowired
     InsertaClientesService serviceInsertaClientesService;
-    
+
     @Autowired
     InsertaHardwareServService serviceInsertaHardwareServService;
-    
+
     @Autowired
     InsertaServidorService serviceInsertaServidorService;
-    
+
     @Autowired
     InsertaProyectoService serviceInsertaProyectoService;
-    
+
     @Autowired
     InsertaTipoBackupService serviceInsertaTipoBackupService;
-    
+
     @Autowired
     InsertaTipoServidorService serviceInsertaTipoServidorService;
-    
+
     @Autowired
     ConsultaRegistroBackupService serviceConsultaRegistroBackupService;
-    
+
     @Autowired
     ConsultaTipoBackupService serviceConsultaTipoBackupService;
-    
+
     @Autowired
     InsertaRegistroBackupService serviceInsertaRegistroBackupService;
-    
+
     @Autowired
     ConsultaTipoServidorService serviceConsultaTipoServidorService;
-    
+
     @Autowired
     ConsultaClienteService serviceConsultaClienteService;
-    
+
     @Autowired
     ConsultaHardwareService serviceConsultaHardwareService;
-    
+
     @Autowired
     ConsultaGrilaProyecBckService serviceConsultaGrilaProyecBckService;
-    
+
     @Autowired
     EliminaBackupService serviceEliminaBackupService;
-    
+
     @Autowired
     EliminaRegistroBackupService serviceEliminaRegistroBackupService;
-    
+
     @Autowired
     EliminaServidorService serviceEliminaServidorService;
-    
+
     @Autowired
     EliminaProyectoService serviceEliminaProyectoService;
-    
+
     @Autowired
     EliminaTipoBackupService serviceEliminaTipoBackupService;
-    
+
     @Autowired
     EliminaTipoServidorService serviceEliminaTipoServidorService;
-    
+
     @Autowired
     EliminaHardwareService serviceEliminaHardwareService;
-    
+
     @Autowired
     EliminaClienteService serviceEliminaClienteService;
-    
+
     @Autowired
     ConsultaDetallesServidorService serviceConsultaDetallesServidorService;
-    
+
     @Autowired
     UpdateDetalleServidorService serviceUpdateDetalleServidorService;
-    
+
     @Autowired
     UpdateInfoUsuarioService serviceUpdateInfoUsuarioService;
-    
+
     @Autowired
     ConsultaServiciosService serviceConsultaServiciosService;
-    
+
     @Autowired
     private FileStorageService fileStorageService;
-    
+
     @Autowired
     InsertaServicioService serviceInsertaServicioService;
-    
+
     @Autowired
     ModImgService serviceModImgService;
-    
+
     @Autowired
     ConsultaInfoUserService serviceConsultaInfoUserService;
-    
+
     @Autowired
     EliminaServicioService serviceEliminaServicioService;
-    
+
     @Autowired
     ConsultaDesarollosPendientesService serviceConsultaDesarollosPendientesService;
-    
+
     @Autowired
     UpdateServicioRealizadoService serviceUpdateServicioRealizadoService;
-    
+
     @Autowired
     CListaEstadoService serviceCListaEstadoService;
-    
+
     @Autowired
     CListaFiltrosService serviceCListaFiltrosService;
-    
+
     @Autowired
     CValidaUsuarioConsolaService serviceCValidaUsuarioConsolaService;
-    
+
     @Autowired
     CUsuarioInfoConsolaService serviceCUsuarioInfoConsolaService;
-    
+
     @Autowired
     CListaRolService serviceCListaRolService;
-    
+
     @Autowired
     CRolModService serviceCRolModService;
-    
+
     @Autowired
     CPermisosRolService serviceCPermisosRolService;
-    
+
     @Autowired
     CPermisosRolModService serviceCPermisosRolModService;
-    
+
     @Autowired
     CUsuarioConsModService serviceCUsuarioConsModService;
-    
+
     @Autowired
     CUsuarioRolModificaService serviceCUsuarioRolModificaService;
-    
+
     @Autowired
     CUsuarioConsultaRolesService serviceCUsuarioConsultaRolesService;
-    
+
     @Autowired
     CUsuarioConsultaService serviceCUsuarioConsultaService;
-    
+
     @Autowired
     ConsultaRolModuloService serviceConsultaRolModuloService;
-    
+
     @Autowired
     ConsultaListaTareaService serviceConsultaListaTareaService;
-    
+
     @Autowired
     CRegistroTareaService serviceCRegistroTareaService;
-    
+
     @Autowired
     CRegistroTareasModService serviceCRegistroTareasModService;
-    
+
+    @Autowired
+    ConsAdminPublicacionesService serviceConsAdminPublicacionesService;
+
+    @Autowired
+    ModAdminpublicacioneService serviceModAdminpublicacioneService;
+
     @GetMapping("/consultabackup/{Nombre_Bck}/{Ip}/{Usuario}/{Cliente}")
     public List<ConsultaBackupEntity> ConsultaBackup(
             @PathVariable String Nombre_Bck,
@@ -294,7 +304,7 @@ public class Controller {
             @PathVariable String Cliente) {
         return serviceConsultaBackupService.ConsultaBackup(Nombre_Bck, Ip, Usuario, Cliente);
     }
-    
+
     @GetMapping("/consultaproyect/{bandera}/{Nombre}/{IdCliente}")
     public List<ConsultaProyectosEntity> ConsultaProyect(
             @PathVariable Integer bandera,
@@ -302,140 +312,140 @@ public class Controller {
             @PathVariable Integer IdCliente) {
         return serviceConsultaProyectosService.ConsultaProyect(bandera, Nombre, IdCliente);
     }
-    
-    @GetMapping("/consultaservidors/{bandera}/{NomServidor}/{SO}/{Estado}/{Usuario}")
+
+    @GetMapping("/consultaservidors/{bandera}/{IpServidor}/{SO}/{Estado}/{TipoUser}")
     public List<ConsultaServidoresEntity> ConsultaServ(
             @PathVariable Integer bandera,
-            @PathVariable String NomServidor,
+            @PathVariable String IpServidor,
             @PathVariable String SO,
             @PathVariable Integer Estado,
-            @PathVariable String Usuario) {
-        return serviceConsultaServidoresService.ConsultaServ(bandera, NomServidor, SO, Estado, Usuario);
+            @PathVariable String TipoUser) {
+        return serviceConsultaServidoresService.ConsultaServ(bandera, IpServidor, SO, Estado, TipoUser);
     }
-    
+
     @PostMapping("/insertarbackup/{Bandera}")
     public String InsertarBackup(
             @RequestBody InsertaBackupEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaBackupService.InsertarBackup(entidad, Bandera);
     }
-    
+
     @PutMapping("/actualizabackup/{Bandera}")
     public String ActualizarBackup(
             @RequestBody InsertaBackupEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaBackupService.ActualizarBackup(entidad, Bandera);
     }
-    
+
     @PostMapping("/insertarcliente/{Bandera}")
     public String InsertaCliente(
             @RequestBody InsertaClientesEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaClientesService.InsertaCliente(entidad, Bandera);
     }
-    
+
     @PutMapping("/actualizacliente/{Bandera}")
     public String ActualizaCliente(
             @RequestBody InsertaClientesEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaClientesService.ActualizaCliente(entidad, Bandera);
     }
-    
+
     @PostMapping("/insertarhardserv/{Bandera}")
     public String InsertarHardServ(
             @RequestBody InsertaHardwareServEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaHardwareServService.InsertarHardServ(entidad, Bandera);
     }
-    
+
     @PostMapping("/insertaserv/{Bandera}")
     public String InsertarServidor(
             @RequestBody InsertaServidorEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaServidorService.InsertarServidor(entidad, Bandera);
     }
-    
+
     @PutMapping("/actualizaservdos/{Bandera}")
     public String ActualizarServidordos(
             @RequestBody InsertaServidorEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaServidorService.ActualizarServidordos(entidad, Bandera);
     }
-    
+
     @PostMapping("/insertaproyecto/{Bandera}")
     public String InsertarProyecto(
             @RequestBody InsertaProyectoEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaProyectoService.InsertarProyecto(entidad, Bandera);
     }
-    
+
     @PutMapping("/actualizaproyecto/{Bandera}")
     public String ActualizarProyecto(
             @RequestBody InsertaProyectoEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaProyectoService.ActualizarProyecto(entidad, Bandera);
     }
-    
+
     @PostMapping("/insertatipobackup/{Bandera}")
     public String InsertaTipoBackup(
             @RequestBody InsertaTipoBackupEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaTipoBackupService.InsertaTipoBackup(entidad, Bandera);
     }
-    
+
     @PutMapping("/actualizatipobackup/{Bandera}")
     public String ActualizaTipoBackup(
             @RequestBody InsertaTipoBackupEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaTipoBackupService.ActualizaTipoBackup(entidad, Bandera);
     }
-    
+
     @PostMapping("/insertatiposervidor/{Bandera}")
     public String InsertaTipoServidor(
             @RequestBody InsertaTipoServidorEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaTipoServidorService.InsertaTipoServidor(entidad, Bandera);
     }
-    
+
     @PutMapping("/actualizatiposervidor/{Bandera}")
     public String ActualizaTipoServidor(
             @RequestBody InsertaTipoServidorEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceInsertaTipoServidorService.ActualizaTipoServidor(entidad, Bandera);
     }
-    
+
     @GetMapping("/consultaregistbck/{Nombre_Bck}")
     public List<ConsultaRegistroBackupEntity> ConsultaRegistBck(
             @RequestBody ConsultaRegistroBackupEntity entidad,
             @PathVariable Integer Nombre_Bck) {
         return serviceConsultaRegistroBackupService.ConsultaRegistBck(entidad, Nombre_Bck);
     }
-    
+
     @PostMapping("/consultatipobck")
     public List<ConsultaTipoBackupEntity> ConsultaTipoBackup(
             @RequestBody ConsultaTipoBackupEntity entidad) {
         return serviceConsultaTipoBackupService.ConsultaTipoBackup(entidad);
     }
-    
+
     @PostMapping("/insertaregistbck")
     public String InsertaRegistroBCK(
             @RequestBody InsertaRegistroBackupEntity entidad) {
         return serviceInsertaRegistroBackupService.InsertaRegistroBCK(entidad);
     }
-    
+
     @PostMapping("/consultatiposerv/{IdTipoServidor}")
     public List<ConsultaTipoServidorEntity> ConsultaTipoServidor(
             @RequestBody ConsultaTipoServidorEntity entidad,
             @PathVariable Integer IdTipoServidor) {//Solo cuando se envia por url algun parametro
         return serviceConsultaTipoServidorService.ConsultaTipoServidor(entidad, IdTipoServidor);
     }
-    
+
     @PostMapping("/consultacliente")
     public List<ConsultaClienteEntity> ConsultaCliente(
             @RequestBody ConsultaClienteEntity entidad) {
         return serviceConsultaClienteService.ConsultaCliente(entidad);
     }
-    
+
     @GetMapping("/consultahardware/{IdServidor}/{DiscoDuro}/{Ram}/{Procesador}")
     public List<ConsultaHardwareEntity> ConsultaHardware(
             @PathVariable Integer IdServidor,
@@ -444,89 +454,89 @@ public class Controller {
             @PathVariable String Procesador) {
         return serviceConsultaHardwareService.ConsultaHardware(IdServidor, DiscoDuro, Ram, Procesador);
     }
-    
+
     @GetMapping("/consgrilaproyectbck/{IdProyecto}")
     public List<ConsultaGrilaProyecBckEntity> ConsultaGrilaProyectBck(
             @PathVariable Integer IdProyecto) {
         return serviceConsultaGrilaProyecBckService.ConsultaGrilaProyectBck(IdProyecto);
     }
-    
+
     @DeleteMapping("/eliminabackup/{bandera}")
     public String EliminaBackup(
             @RequestBody EliminaBackupEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaBackupService.EliminaBackup(entidad, bandera);
     }
-    
+
     @DeleteMapping("/eliminaregistbck/{bandera}")
     public String EliminaRegistBck(
             @RequestBody EliminaRegistroBackupEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaRegistroBackupService.EliminaRegistBck(entidad, bandera);
     }
-    
+
     @DeleteMapping("/eliminaservidor/{bandera}")
     public String EliminaServidor(
             @RequestBody EliminaServidorEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaServidorService.EliminaServidor(entidad, bandera);
     }
-    
+
     @DeleteMapping("/eliminaproyect/{bandera}")
     public String EliminaProyect(
             @RequestBody EliminaProyectoEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaProyectoService.EliminaProyect(entidad, bandera);
     }
-    
+
     @DeleteMapping("/eliminatipobck/{bandera}")
     public String EliminaTipoBCK(
             @RequestBody EliminaTipoBackupEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaTipoBackupService.EliminaTipoBCK(entidad, bandera);
     }
-    
+
     @DeleteMapping("/eliminatiposerv/{bandera}")
     public String EliminaTipoServ(
             @RequestBody EliminaTipoServidorEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaTipoServidorService.EliminaTipoServ(entidad, bandera);
     }
-    
+
     @DeleteMapping("/eliminahardserv/{bandera}")
     public String EliminaHardServ(
             @RequestBody EliminaHardwareEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaHardwareService.EliminaHardServ(entidad, bandera);
     }
-    
+
     @DeleteMapping("/eliminaclient/{bandera}")
     public String EliminaClient(
             @RequestBody EliminaClienteEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaClienteService.EliminaClient(entidad, bandera);
     }
-    
+
     @GetMapping("/consdetallserv/{bandera}/{IdServidor}")
     public List<ConsultaDetallesServidorEntity> ConsultaDetallServ(
             @PathVariable Integer bandera,
             @PathVariable Integer IdServidor) {
         return serviceConsultaDetallesServidorService.ConsultaDetallServ(bandera, IdServidor);
     }
-    
+
     @PutMapping("/updatedetllserv")
     public String UpdateDetllServ(
             @RequestBody UpdateDetalleServidorEntity entidad) {
         return serviceUpdateDetalleServidorService.UpdateDetllServ(entidad);
     }
-    
+
     @PutMapping("/actualizainfousuario/{Bandera}")
     public String ActualizaInfoUser(
             @RequestBody UpdateInfoUsuarioEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceUpdateInfoUsuarioService.ActualizaInfoUser(entidad, Bandera);
     }
-    
+
     @PostMapping("/uploadFile")
     public String uploadFile(@RequestParam("file") MultipartFile file) {
         String fileName = null;
@@ -550,7 +560,7 @@ public class Controller {
         uploadfile.getFileDownloadUri();
         return JSONObject.quote("Archivo Subido Correctamente");
     }
-    
+
     @GetMapping("/consultservicios/{IdProyecto}/{TipoServicio}/{Prioridad}/{NombreSp}")
     public List<ConsultaServiciosEntity> ConsultaServicios(
             @PathVariable Integer IdProyecto,
@@ -559,85 +569,85 @@ public class Controller {
             @PathVariable String NombreSp) {
         return serviceConsultaServiciosService.ConsultaServicios(IdProyecto, TipoServicio, Prioridad, NombreSp);
     }
-    
+
     @PostMapping("/insertaservicio/{bandera}")
     public String InsertaServicio(
             @RequestBody InsertaServicioEntity entidad,
             @PathVariable Integer bandera) {
         return serviceInsertaServicioService.InsertaServicio(entidad, bandera);
     }
-    
+
     @PutMapping("/actualizaservicio/{bandera}")
     public String ActualizaServicio(
             @RequestBody InsertaServicioEntity entidad,
             @PathVariable Integer bandera) {
         return serviceInsertaServicioService.ActualizaServicio(entidad, bandera);
     }
-    
+
     @PutMapping("/modificaimagen/{IdUsuario}")
     public String ActualizaImagen(
             @RequestBody ModImgEntity entidad,
             @PathVariable Integer IdUsuario) {
         return serviceModImgService.ActualizaImagen(entidad, IdUsuario);
     }
-    
+
     @GetMapping("/consultainfouser/{IdUsuario}")
     public List<ConsultaInfoUserEntity> ConsultaBackup(
             @PathVariable Integer IdUsuario) {
         return serviceConsultaInfoUserService.ConsultaInfoUser(IdUsuario);
     }
-    
+
     @DeleteMapping("/eliminaservicio/{bandera}")
     public String EliminaServicio(
             @RequestBody EliminaServicioEntity entidad,
             @PathVariable Integer bandera) {
         return serviceEliminaServicioService.EliminaServicio(entidad, bandera);
     }
-    
+
     @GetMapping("/consdesrrllopendient/{IdIntegrador}/{IdProyecto}")
     public List<ConsultaDesarollosPendientesEntity> ConsultaDesrrlloPendient(
             @PathVariable Integer IdIntegrador,
             @PathVariable Integer IdProyecto) {
         return serviceConsultaDesarollosPendientesService.ConsultaDesrrlloPendient(IdIntegrador, IdProyecto);
     }
-    
+
     @PutMapping("/updateserviciorealizado/{bandera}")
     public String UpdateServRealzdo(
             @RequestBody UpdateServicioRealizadoEntity entidad,
             @PathVariable Integer bandera) {
         return serviceUpdateServicioRealizadoService.UpdateServRealzdo(entidad, bandera);
     }
-    
+
     @GetMapping("/conslistestds")
     public List<CListaEstadoEntity> ConsultaListEstds() {
         return serviceCListaEstadoService.ConsultaListEstds();
     }
-    
+
     @GetMapping("/conslistfiltrs/{Bandera}")
     public List<CListaFiltrosEntity> ConsultaListFiltrs(
             @PathVariable Integer Bandera) {
         return serviceCListaFiltrosService.ConsultaListFiltrs(Bandera);
     }
-    
+
     @GetMapping("/consvalusuarioconsola/{Usuario}")
     public String ConsultaValUsuarioConsola(
             @PathVariable String Usuario) {
         return serviceCValidaUsuarioConsolaService.ConsultaValUsuarioConsola(Usuario);
     }
-    
+
     @GetMapping("/consusuarioinfoconsola/{bandera}")
     public String ConsultaUsuarioInfoConsola(
             @RequestBody CUsuarioInfoConsolaEntity entidad,
             @PathVariable Integer bandera) {
         return serviceCUsuarioInfoConsolaService.ConsultaUsuarioInfoConsola(entidad, bandera);
     }
-    
+
     @GetMapping("/conslistrol/{Bandera}")
     public List<CListaRolEntity> ConsultaListRol(
             @PathVariable Integer Bandera) {
         return serviceCListaRolService.ConsultaListRol(Bandera);
     }
-    
+
     @PostMapping("/insertacrolmod/{Bandera}/{IdUsuario}")
     public String InsertaRolMod(
             @RequestBody CRolModEntity entidad,
@@ -645,7 +655,7 @@ public class Controller {
             @PathVariable Integer IdUsuario) {
         return serviceCRolModService.InsertaRolMod(entidad, Bandera, IdUsuario);
     }
-    
+
     @PutMapping("/actualizacrolmod/{Bandera}/{IdUsuario}")
     public String ActualizaRolMod(
             @RequestBody CRolModEntity entidad,
@@ -653,7 +663,7 @@ public class Controller {
             @PathVariable Integer IdUsuario) {
         return serviceCRolModService.ActualizaRolMod(entidad, Bandera, IdUsuario);
     }
-    
+
     @GetMapping("/conspermisosrol/{bandera}/{IdRol}/{NombreRol}")
     public List<CPermisosRolEntity> ConsultaPermisosRol(
             @PathVariable Integer bandera,
@@ -661,7 +671,7 @@ public class Controller {
             @PathVariable String NombreRol) {
         return serviceCPermisosRolService.ConsultaPermisosRol(bandera, IdRol, NombreRol);
     }
-    
+
     @PutMapping("/actualizacpermisorol/{Bandera}/{IdUsuario}")
     public String ActualizaCPermisosRolMod(
             @RequestBody CPermisosRolModEntity entidad,
@@ -669,7 +679,7 @@ public class Controller {
             @PathVariable Integer IdUsuario) {
         return serviceCPermisosRolModService.ActualizaCPermisosRolMod(entidad, Bandera, IdUsuario);
     }
-    
+
     @PostMapping("/insertausuarioconsmod/{Bandera}/{Idusuario}")
     public String InsertaUsuarioConsMod(
             @RequestBody CUsuarioConsModEntity entidad,
@@ -677,7 +687,7 @@ public class Controller {
             @PathVariable Integer Idusuario) {
         return serviceCUsuarioConsModService.InsertaUsuarioConsMod(entidad, Bandera, Idusuario);
     }
-    
+
     @PutMapping("/actualizausuarioconsmod/{Bandera}/{Idusuario}")
     public String ActualizaUsuarioConsMod(
             @RequestBody CUsuarioConsModEntity entidad,
@@ -685,7 +695,7 @@ public class Controller {
             @PathVariable Integer Idusuario) {
         return serviceCUsuarioConsModService.ActualizaUsuarioConsMod(entidad, Bandera, Idusuario);
     }
-    
+
     @PostMapping("/insertauserolmodifica/{Bandera}/{IdUsuarioRol}/{IdUsuario}")
     public String InsertaUserRolModifica(
             @RequestBody CUsuarioRolModificaEntity entidad,
@@ -694,7 +704,7 @@ public class Controller {
             @PathVariable Integer IdUsuario) {
         return serviceCUsuarioRolModificaService.InsertaUserRolModifica(entidad, Bandera, IdUsuarioRol, IdUsuario);
     }
-    
+
     @DeleteMapping("/eliminauserolmodifica/{Bandera}/{IdUsuarioRol}/{IdUsuario}")
     public String EliminaUserRolModifica(
             @RequestBody CUsuarioRolModificaEntity entidad,
@@ -703,14 +713,14 @@ public class Controller {
             @PathVariable Integer IdUsuario) {
         return serviceCUsuarioRolModificaService.EliminaUserRolModifica(entidad, Bandera, IdUsuarioRol, IdUsuario);
     }
-    
+
     @GetMapping("/consusuarioroles/{Bandera}/{IdUsuario}")
     public List<CUsuarioConsultaRolesEntity> ConsultaUserRoles(
             @PathVariable Integer Bandera,
             @PathVariable Integer IdUsuario) {
         return serviceCUsuarioConsultaRolesService.ConsultaUserRoles(Bandera, IdUsuario);
     }
-    
+
     @GetMapping("/conscusuario/{Bandera}/{Idusuario}/{Estado}/{IdRol}/{IdUsuarioCons}/{NombreUsuario}")
     public List<CUsuarioConsultaEntity> ConsultaCUsuario(
             @PathVariable Integer Bandera,
@@ -721,51 +731,66 @@ public class Controller {
             @PathVariable String NombreUsuario) {
         return serviceCUsuarioConsultaService.ConsultaCUsuario(Bandera, Idusuario, Estado, IdRol, IdUsuarioCons, NombreUsuario);
     }
-    
+
     @GetMapping("/consrolmodulo/{IdRol}/{Modulo}")
     public List<ConsultaRolModuloEntity> ConsultaRolModulo(
             @PathVariable Integer IdRol,
             @PathVariable String Modulo) {
         return serviceConsultaRolModuloService.ConsultaRolModulo(IdRol, Modulo);
     }
-    
+
     @GetMapping("/conslistatarea")
     public List<ConsultaListaTareaEntity> ConsultaListaTareas() {
         return serviceConsultaListaTareaService.ConsultaListaTareas();
     }
-    
+
     @PostMapping("/consregistrotareas/{Bandera}")
     public List<CRegistroTareasEntity> ConsultaRegistroTarea(
             @RequestBody CRegistroTareasEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceCRegistroTareaService.ConsultaRegistroTarea(entidad, Bandera);
     }
-    
+
     @PostMapping("/insertaregtareasmod/{Bandera}")
     public String InsertarRegTareasMod(
             @RequestBody CRegistroTareasModEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceCRegistroTareasModService.InsertarRegTareasMod(entidad, Bandera);
     }
-    
+
     @PutMapping("/actualizaregtareasmod/{Bandera}")
     public String ActualizarRegTareasMod(
             @RequestBody CRegistroTareasModEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceCRegistroTareasModService.ActualizarRegTareasMod(entidad, Bandera);
     }
-    
+
     @PostMapping("/eliminaregtareamod/{Bandera}")
     public String EliminaRegTareasMod(
             @RequestBody CRegistroTareasModEntity entidad,
             @PathVariable Integer Bandera) {
         return serviceCRegistroTareasModService.EliminaRegTareasMod(entidad, Bandera);
     }
-    
+
     @PostMapping("/servicioencripta")
     public String ServicioEncriptaDesencripta(
             @RequestBody EncriptacionEntity entidad) {
         return serviceCUsuarioInfoConsolaService.Clave(entidad);
     }
-    
+
+    @PostMapping("/consadminpublicaciones/{Bandera}/{TipoPublicacion}/{Estado}")
+    public List<ConsAdminPublicacionesEntity> ConsAdminPublic(
+            @RequestBody ConsAdminPublicacionesEntity entidad,
+            @PathVariable Integer Bandera,
+            @PathVariable Integer TipoPublicacion,
+            @PathVariable Integer Estado) {
+        return serviceConsAdminPublicacionesService.ConsAdminPublic(entidad, Bandera, TipoPublicacion, Estado);
+    }
+
+    @PostMapping("/modadminpublicaciones/{Bandera}")
+    public String ModAdminPublic(
+            @RequestBody ModAdminpublicacionesEntity entidad,
+            @PathVariable Integer Bandera) {
+        return serviceModAdminpublicacioneService.ModAdminPublic(entidad, Bandera);
+    }
 }

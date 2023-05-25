@@ -20,6 +20,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\UpdateInfoUsuarioServiceImplement
 com\cdi\com\AdministradorCDI\Entity\CUsuarioConsultaRolesEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaHardwareEntity.class
 com\cdi\com\AdministradorCDI\Entity\CPermisosRolModEntity.class
+com\cdi\com\AdministradorCDI\Entity\ConsAdminPublicacionesEntity.class
 com\cdi\com\AdministradorCDI\Entity\EliminaServicioEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\InsertaTipoBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Comun\clsEncriptacion.class
@@ -71,6 +72,7 @@ com\cdi\com\AdministradorCDI\Entity\UploadFileResponse.class
 com\cdi\com\AdministradorCDI\Entity\CRolModEntity.class
 com\cdi\com\AdministradorCDI\Services\ConsultaClienteService.class
 com\cdi\com\AdministradorCDI\Services\CValidaUsuarioConsolaService.class
+com\cdi\com\AdministradorCDI\Services\ModAdminpublicacioneService.class
 com\cdi\com\AdministradorCDI\Services\ModImgService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CListaFiltrosServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaServiciosService.class
@@ -118,8 +120,10 @@ com\cdi\com\AdministradorCDI\Entity\EliminaClienteEntity.class
 com\cdi\com\AdministradorCDI\Entity\ModImgEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaHardwareServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaProyectosService.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ModAdminpublicacioneServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaBackupService.class
 com\cdi\com\AdministradorCDI\AdministradorCDIApplication.class
+com\cdi\com\AdministradorCDI\Services\ConsAdminPublicacionesService.class
 com\cdi\com\AdministradorCDI\Services\InsertaServidorService.class
 com\cdi\com\AdministradorCDI\ServiceImplements\ConsultaTipoBackupServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Entity\EliminaProyectoEntity.class
@@ -133,6 +137,7 @@ com\cdi\com\AdministradorCDI\ServiceImplements\CUsuarioInfoConsolaServiceImpleme
 com\cdi\com\AdministradorCDI\Entity\EliminaTipoBackupEntity.class
 com\cdi\com\AdministradorCDI\Entity\EncriptacionEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaTipoBackupEntity.class
+com\cdi\com\AdministradorCDI\Entity\ModAdminpublicacionesEntity.class
 com\cdi\com\AdministradorCDI\Entity\ConsultaProyectosEntity.class
 com\cdi\com\AdministradorCDI\Services\EliminaTipoServidorService.class
 com\cdi\com\AdministradorCDI\Services\EliminaClienteService.class
@@ -160,4 +165,5 @@ com\cdi\com\AdministradorCDI\Entity\CRegistroTareasModEntity.class
 com\cdi\com\AdministradorCDI\ServiceImplements\EliminaServidorServiceImplementacion.class
 com\cdi\com\AdministradorCDI\ServiceImplements\CRegistroTareaServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\InsertaTipoServidorService.class
+com\cdi\com\AdministradorCDI\ServiceImplements\ConsAdminPublicacionesServiceImplementacion.class
 com\cdi\com\AdministradorCDI\Services\ConsultaRolModuloService.class
