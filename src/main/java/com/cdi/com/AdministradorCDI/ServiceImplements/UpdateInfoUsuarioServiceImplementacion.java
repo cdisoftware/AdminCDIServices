@@ -1,5 +1,6 @@
 package com.cdi.com.AdministradorCDI.ServiceImplements;
 
+import com.cdi.com.AdministradorCDI.Comun.clsEncriptacion;
 import com.cdi.com.AdministradorCDI.Entity.UpdateInfoUsuarioEntity;
 import com.cdi.com.AdministradorCDI.Services.UpdateInfoUsuarioService;
 import javax.persistence.EntityManager;
@@ -32,7 +33,7 @@ public class UpdateInfoUsuarioServiceImplementacion implements UpdateInfoUsuario
             updateinfo.setParameter("IdUsuario", entidad.getId_U());
             updateinfo.setParameter("Nombre", entidad.getNombre());
             updateinfo.setParameter("Apellido", entidad.getApellido());
-            updateinfo.setParameter("Password", entidad.getPassword());
+            updateinfo.setParameter("Password", clsEncriptacion.Encriptar(entidad.getPassword()));
             updateinfo.setParameter("Direccion", entidad.getDireccion());
             updateinfo.setParameter("Telefono", entidad.getTelefono());
             updateinfo.setParameter("Email", entidad.getEmail());
