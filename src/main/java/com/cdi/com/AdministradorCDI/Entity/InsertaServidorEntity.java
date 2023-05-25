@@ -24,17 +24,17 @@ import lombok.Data;
 public class InsertaServidorEntity {
 
     @Id
-    @JsonProperty("Id_S")
-    public Integer Id_S;
+    @JsonProperty("IdServidor")
+    public Integer IdServidor;
 
-    @JsonProperty("Ip_S")
-    public String Ip_S;
+    @JsonProperty("IpServidor")
+    public String IpServidor;
 
     @JsonProperty("Nombre")
     public String Nombre;
 
-    @JsonProperty("SO")
-    public String SO;
+    @JsonProperty("SistemaOper")
+    public String SistemaOper;
 
     @JsonProperty("Software")
     public String Software;
@@ -42,25 +42,43 @@ public class InsertaServidorEntity {
     @JsonProperty("Estado")
     public Integer Estado;
 
-    @JsonProperty("Id_Tipo_S")
-    public Integer Id_Tipo_S;
+    @JsonProperty("IdTipoServ")
+    public Integer IdTipoServ;
 
     @JsonProperty("Observacion")
     public String Observacion;
 
-    @JsonProperty("Usuario_Ser")
-    public String Usuario_Ser;
+    @JsonProperty("UserServidor")
+    public String UserServidor;
 
     @JsonProperty("Password")
     public String Password;
 
-    @JsonProperty("Servicio_Aloja")
-    public Integer Servicio_Aloja;
+    @JsonProperty("ServidorAloja")
+    public Integer ServidorAloja;
 
-    @JsonProperty("Id_U")
-    public Integer Id_U;
+    @JsonProperty("IdUsuario")
+    public Integer IdUsuario;
 
-    @JsonProperty("Fecha_Ult_Mod")
-    public String Fecha_Ult_Mod;
+    @JsonProperty("Host")
+    public String Host;
+
+    @JsonProperty("IpPublica")
+    public String IpPublica;
+
+    @JsonProperty("AplicacionesIIS")
+    public String AplicacionesIIS;
+
+    @JsonProperty("DiscoDuro")
+    public String DiscoDuro;
+
+    @JsonProperty("RAM")
+    public String RAM;
+
+    @JsonProperty("Procesador")
+    public String Procesador;
+
+    @JsonProperty("BaseDeDatos")
+    public String BaseDeDatos;
 
 }

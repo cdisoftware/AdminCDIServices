@@ -29,17 +29,24 @@ public class InsertaBackupServiceImplementacion implements InsertaBackupService 
             insertbackup.registerStoredProcedureParameter("IdTipoBackup", Integer.class, ParameterMode.IN);
             insertbackup.registerStoredProcedureParameter("IdUsuario", Integer.class, ParameterMode.IN);
             insertbackup.registerStoredProcedureParameter("Fecha", String.class, ParameterMode.IN);
+            insertbackup.registerStoredProcedureParameter("Ruta", String.class, ParameterMode.IN);
+            insertbackup.registerStoredProcedureParameter("Descripcion", String.class, ParameterMode.IN);
+            insertbackup.registerStoredProcedureParameter("Estado", Integer.class, ParameterMode.IN);
 
             insertbackup.setParameter("Bandera", Bandera);
-            insertbackup.setParameter("IdBackup", entidad.getId_B());
+            insertbackup.setParameter("IdBackup", entidad.getIdBackup());
             insertbackup.setParameter("Nombre", entidad.getNombre());
-            insertbackup.setParameter("IdProyecto", entidad.getId_PRY());
+            insertbackup.setParameter("IdProyecto", entidad.getIdProyecto());
             insertbackup.setParameter("Ambiente", entidad.getAmbiente());
             insertbackup.setParameter("Periodicidad", entidad.getPeriodicidad());
             insertbackup.setParameter("IdServidor", entidad.getId_Servidor());
-            insertbackup.setParameter("IdTipoBackup", entidad.getId_Tipo_BCK());
-            insertbackup.setParameter("IdUsuario", entidad.getId_Usuario());
-            insertbackup.setParameter("Fecha", entidad.getFecha_Ult_Mod());
+            insertbackup.setParameter("IdTipoBackup", entidad.getIdTipoBackup());
+            insertbackup.setParameter("IdUsuario", entidad.getIdUsuario());
+            insertbackup.setParameter("Fecha", entidad.getFecha());
+            insertbackup.setParameter("Ruta", entidad.getRuta());
+            insertbackup.setParameter("Descripcion", entidad.getDescripcion());
+            insertbackup.setParameter("Estado", entidad.getEstado());
+
             insertbackup.execute();
             return JSONObject.quote((String) insertbackup.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {
@@ -62,16 +69,24 @@ public class InsertaBackupServiceImplementacion implements InsertaBackupService 
             rolbackup.registerStoredProcedureParameter("IdTipoBackup", Integer.class, ParameterMode.IN);
             rolbackup.registerStoredProcedureParameter("IdUsuario", Integer.class, ParameterMode.IN);
             rolbackup.registerStoredProcedureParameter("Fecha", String.class, ParameterMode.IN);
+            rolbackup.registerStoredProcedureParameter("Ruta", String.class, ParameterMode.IN);
+            rolbackup.registerStoredProcedureParameter("Descripcion", String.class, ParameterMode.IN);
+            rolbackup.registerStoredProcedureParameter("Estado", Integer.class, ParameterMode.IN);
+
             rolbackup.setParameter("Bandera", Bandera);
-            rolbackup.setParameter("IdBackup", entidad.getId_B());
+            rolbackup.setParameter("IdBackup", entidad.getIdBackup());
             rolbackup.setParameter("Nombre", entidad.getNombre());
-            rolbackup.setParameter("IdProyecto", entidad.getId_PRY());
+            rolbackup.setParameter("IdProyecto", entidad.getIdProyecto());
             rolbackup.setParameter("Ambiente", entidad.getAmbiente());
             rolbackup.setParameter("Periodicidad", entidad.getPeriodicidad());
             rolbackup.setParameter("IdServidor", entidad.getId_Servidor());
-            rolbackup.setParameter("IdTipoBackup", entidad.getId_Tipo_BCK());
-            rolbackup.setParameter("IdUsuario", entidad.getId_Usuario());
-            rolbackup.setParameter("Fecha", entidad.getFecha_Ult_Mod());
+            rolbackup.setParameter("IdTipoBackup", entidad.getIdTipoBackup());
+            rolbackup.setParameter("IdUsuario", entidad.getIdUsuario());
+            rolbackup.setParameter("Fecha", entidad.getFecha());
+            rolbackup.setParameter("Ruta", entidad.getRuta());
+            rolbackup.setParameter("Descripcion", entidad.getDescripcion());
+            rolbackup.setParameter("Estado", entidad.getEstado());
+
             rolbackup.execute();
             return JSONObject.quote((String) rolbackup.getOutputParameterValue("Respuesta"));
         } catch (Exception ex) {

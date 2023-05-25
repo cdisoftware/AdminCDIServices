@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface ConsultaServidoresService {
 
-    public List<ConsultaServidoresEntity> ConsultaServ(Integer bandera, String NomServidor, String SO, Integer Estado, String Usuario);
+    public List<ConsultaServidoresEntity> ConsultaServ(Integer bandera, String IpServidor, String SO, Integer Estado, String TipoUser);
 }
